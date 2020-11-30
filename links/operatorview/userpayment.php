@@ -109,7 +109,7 @@
 	<table class="table table-bordered table-striped" id="empTable">
 		<thead>
 			<tr class="header">
-				<th style="text-align:center;">ID</th>
+				<th style="text-align:center;">Tenant ID</th>
                 <th style="text-align:center;">Tenant Name</th>
                 <th style="text-align:center;">Location</th>
                 <th style="text-align:center;">Room Number</th>
@@ -133,7 +133,7 @@
 			?>
 			<tr>
 				<?php $n++; ?>
-				<td style="text-align:center;"><?php echo $val['ID']; ?></td>
+				<td style="text-align:center;"><?php echo $val['Tenant_ID']; ?></td>
                 <td style="text-align:center;"><?php echo $val['tenantname']; ?></td>
                 <td style="text-align:center;"><?php echo $val['location']; ?></td>
                 <td style="text-align:center;"><?php echo $val['roomnumber']; ?></td>
