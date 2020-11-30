@@ -1077,7 +1077,7 @@ $mail->SMTPAuth   = true;
 $mail->SMTPSecure = "tls";
 $mail->Port       = 587;
 $mail->Host       = "smtp.gmail.com";
-$mail->Username   = "ApartmentManagementSofEng@gmail.com";
+$mail->Username   = " ApartmentManagementSofEng@gmail.com";
 $mail->Password   = "rtu1969!";
 $mail->IsHTML(true);
 $mail->AddAddress("ApartmentManagementSofEng@gmail.com", "JohnD");
