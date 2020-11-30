@@ -937,6 +937,9 @@ $("#show-sidebar").click(function() {
           <div class="input-group" style="text-align:center;">
             <a href="" style="background-color:transparent;color:#b8bfce;border-right:none;border-left:none;border-color:#b8bfce;" class="btn btn-lg btn-default">ANNOUNCEMENT</a>
           </div>
+          <div class="input-group" style="text-align:center;">
+            <a href="" style="background-color:transparent;color:#b8bfce;border-right:none;border-left:none;border-color:#b8bfce;" class="btn btn-lg btn-default">TENANT MESSAGES</a>
+          </div>
         </div>
       </div>
       <!-- sidebar-search  -->
