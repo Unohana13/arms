@@ -110,11 +110,11 @@ if(isset($_POST['login'])){
   <link rel="icon" href="icon/main.png">
   <style>
   @font-face {
-    src: url(Text/Anton-Regular.ttf);
+    src: url(text/Anton-Regular.ttf);
     font-family: text2; 
   }
   @font-face {
-    src: url(Text/Roboto-Light.ttf);
+    src: url(text/Roboto-Light.ttf);
     font-family: robo;
   }
   .map-container-7{
@@ -298,7 +298,7 @@ if(isset($_POST['login'])){
     border-color: white;
     text-align: center;
     color: whitesmoke;
-    width: 300px;
+    width: 200px;
 
 }
 .homepagetext2 {
@@ -310,7 +310,7 @@ if(isset($_POST['login'])){
     border-style: solid;
     border-color: white;
     color: whitesmoke;
-    width: 300px;
+    width: 200px;
 
 }
 .homepagetext3 {
@@ -492,9 +492,12 @@ html{
         <span class="icon-bar"></span>
       </button>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar" style="font-weight: bold;">
+    <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-left">
-            <li><a href="#ARMS">ARMS</a></li>
+      <li><a href="#">
+          <span class="glyphicon glyphicon-home"></span> ARMS
+        </a></li>
+        <li><a href="#ARMS">ABOUT</a></li>
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#locations">
           Locations <span class="caret"></span></a>
@@ -505,7 +508,7 @@ html{
           </ul>
          </li>
         <li><a href="#contact">Contact Us</a></li>
-        <li><a href="#reservation" data-toggle="modal">Application</a></li>
+        <li><a href="#reservation" data-toggle="modal">Reservation</a></li>
         <li><a data-toggle="modal" data-target="#ModalLogin">LOGIN</a></li>
 
 
@@ -647,16 +650,16 @@ html{
     <div class="carousel-inner">
 
       <div class="item active">
-        <img src="Carouselpic\location1\loc1.jpg" alt="first pic" style="width:auto; height:500px; margin:auto;">
+        <img src="Carouselpic\location1.JPG" alt="first pic" style="width:auto; height:500px; margin:auto;">
       </div>
       <div class="item">
-        <img src="Carouselpic\location1\building1room1.jpg" alt="Second pic" style="width:auto; height:500px; margin:auto;">
+        <img src="Carouselpic\location1\building1room1.JPG" alt="Second pic" style="width:auto; height:500px; margin:auto;">
       </div>
       <div class="item">
-        <img src="Carouselpic\location1\building1room2.jpg" alt="third pic"  style="width:auto; height:500px; margin:auto;">
+        <img src="Carouselpic\location1\building1room2.JPG" alt="third pic"  style="width:auto; height:500px; margin:auto;">
       </div>
       <div class="item">
-        <img src="Carouselpic\location1\building1room3.jpg" alt="Fourth pic" style="width:auto; height:500px; margin:auto;">
+        <img src="Carouselpic\location1\building1room3.JPG" alt="Fourth pic" style="width:auto; height:500px; margin:auto;">
       </div>
       <div class="item">
         <img src="Carouselpic\location1\building1room4.jpeg" alt="Fifth pic" style="width:auto; height:500px; margin:auto;">
@@ -690,9 +693,9 @@ html{
 
 <!-- Container (Services Section) -->
 <div id="services" class="container-fluid text-center">
-      <br></br><br></br>
   <h2>Location 1 AMMENITIES</h2>
   <h4>What we offer</h4>
+  <br>
   <div class="row slideanim">
     <div class="col-sm-4" style="display:flex;">
       <span class="glyphicon glyphicon-globe logo-small" style="display:flex;">
@@ -737,16 +740,16 @@ html{
     <div class="carousel-inner">
 
       <div class="item active">
-        <img src="Carouselpic\location2.jpg" alt="first pic" style="width:auto; height:500px; margin:auto;">
+        <img src="Carouselpic\location2.JPG" alt="first pic" style="width:auto; height:500px; margin:auto;">
       </div>
       <div class="item">
-        <img src="Carouselpic\location1\building1room1.jpg" alt="Second pic" style="width:auto; height:500px; margin:auto;">
+        <img src="Carouselpic\location1\building1room1.JPG" alt="Second pic" style="width:auto; height:500px; margin:auto;">
       </div>
       <div class="item">
-        <img src="Carouselpic\location1\building1room2.jpg" alt="third pic"  style="width:auto; height:500px; margin:auto;">
+        <img src="Carouselpic\location1\building1room2.JPG" alt="third pic"  style="width:auto; height:500px; margin:auto;">
       </div>
       <div class="item">
-        <img src="Carouselpic\location1\building1room3.jpg" alt="Fourth pic" style="width:auto; height:500px; margin:auto;">
+        <img src="Carouselpic\location1\building1room3.JPG" alt="Fourth pic" style="width:auto; height:500px; margin:auto;">
       </div>
       <div class="item">
         <img src="Carouselpic\location1\building1room4.jpeg" alt="Fifth pic" style="width:auto; height:500px; margin:auto;">
@@ -779,9 +782,9 @@ html{
 
 <!-- Container (Services Section) -->
 <div id="services" class="container-fluid text-center">
-      <br></br><br></br>
   <h2>Location 2 AMMENITIES</h2>
   <h4>What we offer</h4>
+  <br>
   <div class="row slideanim">
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-flash logo-small"></span>
@@ -795,7 +798,7 @@ html{
     </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-tint logo-small"></span>
-      <h4>WATER</h4>
+      <h4>FREE WATER</h4>
       <p>In one drop of water are found all the secrets of all the oceans; in one aspect of You are found all the aspects of existence. That's why it's free </p>
     </div>
   </div>
@@ -855,96 +858,6 @@ html{
       </div>
     </div>
   </div>
-
-<!-- location3 -->
-  <div id="mylocation3" class="carousel slide" data-ride="carousel" style="top:-29px;">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#mylocation3" data-slide-to="0" class="active"></li>
-      <li data-target="#mylocation3" data-slide-to="1"></li>
-      <li data-target="#mylocation3" data-slide-to="2"></li>
-      <li data-target="#mylocation3" data-slide-to="3"></li>
-      <li data-target="#mylocation3" data-slide-to="4"></li>
-    </ol>
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-
-      <div class="item active">
-        <img src="Carouselpic\location3.jpg" alt="first pic" style="width:auto; height:500px; margin:auto;">
-      </div>
-      <div class="item">
-        <img src="Carouselpic\location1\building1room1.jpg" alt="Second pic" style="width:auto; height:500px; margin:auto;">
-      </div>
-      <div class="item">
-        <img src="Carouselpic\location1\building1room2.jpg" alt="third pic"  style="width:auto; height:500px; margin:auto;">
-      </div>
-      <div class="item">
-        <img src="Carouselpic\location1\building1room3.jpg" alt="Fourth pic" style="width:auto; height:500px; margin:auto;">
-      </div>
-      <div class="item">
-        <img src="Carouselpic\location1\building1room4.jpeg" alt="Fifth pic" style="width:auto; height:500px; margin:auto;">
-      </div>
-    </div>
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#mylocation3" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#mylocation3" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-  <!-- location3 details -->
-<div class="building_text">
-  <div>
-      <h1> Location 3  Building Details</h1>
-  </div>
-  <div>
-     <p>Address: Pasig City</p>
-     <p>Income Requirment: Must have 2x the rent in the total household income</p>
-     <p>Pets: No pets are allowed</p>
-     <p>Fee: $150 per aparment</p>
-     <p>Rent: $45 for 1 per/month, $40 for 2pets/months</p>
-  </div>
-</div>
-<br></br>
-
-<!-- Container (Services Section) -->
-<div id="services" class="container-fluid text-center">
-      <br></br><br></br>
-  <h2>Location 3 AMMENITIES</h2>
-  <h4>What we offer</h4>
-  <div class="row slideanim">
-    <div class="col-sm-4" style="display:flex;">
-      <span class="glyphicon glyphicon-globe logo-small" style="display:flex;">
-      </span>
-      <div style="margin-left:10px;">
-      <h4 style="font-size:30px; margin-bottom:10px; font-farmily:robo;">FREE WIFI</h4>
-      <p class="amme">The building is a facility with a free wifi Access with an internet speed that matched up the standard data rate speed for researching</p>
-      </div>
-    </div>
-    <div class="col-sm-4" style="display:flex;">
-      <span class="glyphicon glyphicon-facetime-video logo-small" style="display:flex;">
-      </span>
-      <div style="margin-left:10px;">
-      <h4 style="font-size:30px; margin-bottom:10px; font-farmily:robo;">Cover with CCTV</h4>
-      <p class="amme">The building is a facility Covered with Cameras in every corner and hallway.</p>
-      </div>
-    </div>
-    <div class="col-sm-4" style="display:flex;">
-      <span class="glyphicon glyphicon-road logo-small" style="display:flex;">
-      </span>
-      <div style="margin-left:10px;">
-      <h4 style="font-size:30px; margin-bottom:10px; font-farmily:robo;">Free Parking</h4>
-      <p class="amme">The building has a large space for tenants with vehicle.</p>
-      </div>
-    </div>
-  </div>
-</div>
-<br>
-
 <!-- Terms and conditions -->
 <div id="terms" class="modal fade">
       <div class="modal-dialog">
@@ -1098,7 +1011,7 @@ $mail->MsgHTML($content);
   ?>
 <footer class="container-fluid text-center">
 
-      <a href="#ARMS" title="To Top">
+      <a href="#ramonadormitory" title="To Top">
         <span class="glyphicon glyphicon-chevron-up"></span>
       </a>
 </footer>
