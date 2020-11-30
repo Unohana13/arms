@@ -1033,7 +1033,7 @@ html{
       <p>Contact us and we'll get back to you within 24 hours.</p>
       <p><span class="glyphicon glyphicon-map-marker"></span> Location of HQ </p>
       <p><span class="glyphicon glyphicon-phone"></span> +639484143467 / +639480704776</p>
-      <p><span class="glyphicon glyphicon-envelope"></span>ApartmentManagementSofEng@gmail.com</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> ApartmentManagementSofEng@gmail.com</p>
     </div>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" id="form" method="post" name="form">
     <div class="col-sm-7 slideanim">
