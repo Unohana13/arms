@@ -937,9 +937,6 @@ $("#show-sidebar").click(function() {
           <div class="input-group" style="text-align:center;">
             <a href="" style="background-color:transparent;color:#b8bfce;border-right:none;border-left:none;border-color:#b8bfce;" class="btn btn-lg btn-default">ANNOUNCEMENT</a>
           </div>
-          <div class="input-group" style="text-align:center;">
-            <a href="operatorview/announcementmanagement.php" style="background-color:transparent;color:#b8bfce;border-right:none;border-left:none;border-color:#b8bfce;" class="btn btn-lg btn-default">TENANT MESSAGES</a>
-          </div>
         </div>
       </div>
       <!-- sidebar-search  -->
@@ -969,6 +966,9 @@ $("#show-sidebar").click(function() {
                 </li>
                 <li>
                   <a href="operatorview/archives.php" target="myIframe">Archives</a>
+                </li>
+                <li>
+                  <a href="operatorview/ownermsg.php" target="myIframe">Tenant Messages</a>
                 </li>
               </ul>
             </div>
@@ -1073,11 +1073,6 @@ $("#show-sidebar").click(function() {
 
     <div class="embed-responsive" style="height:590px; width:98%; left:1%; text-align:center;" >
     <iframe src="operatorview/announcementmanagement.php"class="embed-responsive-item" name="myIframe" allowfullscreen></iframe>
-
-
-    </div>
-    <div class="embed-responsive" style="height:590px; width:98%; left:1%; text-align:center;" >
-    <iframe src="operatorview/ownermsg.php"class="embed-responsive-item" name="myIframe" allowfullscreen></iframe>
 
 
     </div>
