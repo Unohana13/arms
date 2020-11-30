@@ -689,7 +689,7 @@ $("#show-sidebar").click(function() {
       </div>
       <div class="sidebar-header">
         <div class="user-pic">
-          <img class="img-responsive img-rounded" src="../icon/pic.png"
+          <img class="img-responsive img-rounded" src="../icon/admin.png"
             alt="User picture">
         </div>
         <div class="user-info">
@@ -740,6 +740,18 @@ $("#show-sidebar").click(function() {
             <a href="userview/paymentstatus.php" target="myIframe">
               <i class="fa fa-book"></i>
               <span style="font-size:13px;">Payment Status Update</span>
+            </a>
+          </li>
+          <li>
+            <a href="userview/userpayment.php" target="myIframe">
+              <i class="fa fa-book"></i>
+              <span style="font-size:13px;">User payment</span>
+            </a>
+          </li>
+          <li>
+            <a href="userview/ownermsg.php" target="myIframe">
+              <i class="fa fa-book"></i>
+              <span style="font-size:13px;">Message the Owner</span>
             </a>
           </li>
 
