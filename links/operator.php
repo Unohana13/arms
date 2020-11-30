@@ -1079,7 +1079,6 @@ $("#show-sidebar").click(function() {
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" enctype="multipart/form-data">
           <div class="modal-header">
             <h4 class="modal-title">Please Select Month and Year to print</h4>
-            <a class="btn btn-link" href="Admin.php">Cancel</a>
           </div>
           <div class="modal-body">
             <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -1147,7 +1146,6 @@ $("#show-sidebar").click(function() {
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" enctype="multipart/form-data">
           <div class="modal-header">
             <h4 class="modal-title">Are you sure to print report for Tenant list</h4>
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
           </div>
           <div class="modal-body">
             <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
