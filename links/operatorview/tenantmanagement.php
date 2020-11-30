@@ -389,7 +389,7 @@ input[type=number] {
 															</div>
 															<div class="form-group">
 																<label>Full Name</label>
-																<input id="inputField" onkeyup="validate();" type="text" name = "editfullname" class="form-control" value="<?php echo mb_strtoupper($TenantRES['Tenant_Name']); ?>" required>
+																<input id="inputField" onkeyup="validate();" type="text" name = "editfullname" class="form-control" value="<?php echo ($TenantRES['Tenant_Name']); ?>" required>
 															</div>
 
 															<div class="form-group">
