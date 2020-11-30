@@ -981,6 +981,9 @@ $("#show-sidebar").click(function() {
                 <li>
                   <a href="operatorview/pendingnot.php" target="myIframe">Tenant</a>
                 </li>
+                <li>
+                  <a href="operatorview/userpayment.php" target="myIframe">User Transaction</a>
+                </li>
 
 
               </ul>
