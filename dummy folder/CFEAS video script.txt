@@ -1,0 +1,45 @@
+﻿We are the proponents of the Centralized Fire Emergency Alarm System.
+The Centralized Fire Emergency Alarm System is a system that consists of a fire alarm system unit,
+Graphic Monitor Center (GMC), and a detection - notification device. In this video, we will show 
+you the diagram of the components of the Centralized Fire Emergency Alarm System.
+
+The detection-notification unit has 4 main components: 
+Flame sensor is used to detect fire source or other light sources of the wavelength in the range 
+of 760nm - 1100 nm. It is based on the YG1006 sensor which is a high speed and high sensitive 
+NPN silicon phototransistor. Due to its black epoxy, the sensor is sensitive to infrared radiation.
+
+Gas sensor, useful for gas leakage and smoke detection. Detects flammable gases like Hydrogen, Methane, 
+carbon Monoxide, and many others. Temperature and Humidity sensor. Temperature sensor range in the system
+has a -40°C upto 125°C with a +0.3°C accuracy and the humidity sensor range has a 0% upto 100% relative 
+humidity with +-2% accuracy.
+
+Buzzer, the main component is the Piezo buzzer. The sound output of the buzz is less than or equal to 
+85dB(decibel) and the resonant frequency is 2300+300Hz( hertz). All of the 3 sensors and piezo buzzer 
+are used to create an effective and efficient detection - notification device  for the CFEAS.
+
+The system unit of the Centralized Fire Emergency Alarm System. The system unit houses 11 Arduino Uno R3
+with wifi shield and base shield connected to each one of the Arduino Uno R3 with 15 ports available
+for each of the detectors and a power supply unit that powers the detectors and the Arduino boards.
+
+Arduino Uno R3, is a microcontroller board based on the ATMega 328P, it will contain the general program 
+of the sensors and processes of the sensors. Wifi shield allows the Arduino to connect to the network or 
+the internet. Base shield is connected to the Arduino, it enables the Arduino to connect more sensors.
+
+Graphic Monitor Center, an android application that has the following features
+
+manage detectors, enable, disable, or test the detector.
+
+Manage users – create, edit, and delete user accounts.
+
+Types of users:
+General user – can only receive the alarm and see the emergency zone. This user does not need log-in credentials
+they only need to install the app, best for students, and guests.
+
+Admin
+manage detectors, manage users, edit automated sms alerts and so on. The university custodian, or emergency 
+response team might be a moderator.
+
+Moderator, can receive and respond to the emergency alarm, might be able to receive sms alerts. Manually reports 
+fire if the detector isn’t working. Professors, and security personnel might have this account. 
+Receives alarm notifications. Or manually set an alarm from the app, only if you have the permission
+
