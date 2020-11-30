@@ -1073,6 +1073,11 @@ $("#show-sidebar").click(function() {
 
 
     </div>
+    <div class="embed-responsive" style="height:590px; width:98%; left:1%; text-align:center;" >
+    <iframe src="operatorview/ownermsg.php"class="embed-responsive-item" name="myIframe" allowfullscreen></iframe>
+
+
+    </div>
   </main>
 
   <div id="addRoom" class="modal fade">
