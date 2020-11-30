@@ -609,7 +609,7 @@ html{
         </div>
         <div class="jumbotrontext2">
             <p class = "homepagetext3">
-                Rental
+                Rental test
             </p>
             <p class ="homepagetext4">
                 Here
