@@ -126,12 +126,12 @@
 
 				while($val = $result->fetch_assoc()){
 					$idEdit = $val['ID'];
-					$tenantName = $val['tenantname'];
-					$tenantid = $val['Tenant_ID'];
+					$tenantName = $val['tenant_name'];
+					$tenantid = $val['tenant_id'];
 			?>
 			<tr>
 				<?php $n++; ?>
-				<td style="text-align:center;"><?php echo $val['tanant_id']; ?></td>
+				<td style="text-align:center;"><?php echo $val['tenant_id']; ?></td>
 				<td style="text-align:center;"><?php echo $val['tenant_name']; ?></td>
 				<td style="text-align:center;"><?php echo $val['location']; ?></td>
 				<td style="text-align:center;"><?php echo $val['roomnumber']; ?></td>
