@@ -1087,13 +1087,13 @@ $mail->Subject = "This is a Feedback from the Homepage";
 $content = "<b> ". $comments ."</b>";
 $mail->MsgHTML($content);
 
-   if(!$mail->Send()) {
+   /* if(!$mail->Send()) {
     echo "<script>$('#ModalMessageNotSuccess').modal('show')</script>";
     //var_dump($mail);
   } else {
   echo "<script>$('#ModalMessageSuccess').modal('show')</script>";
   } 
-
+*/
   }
   ?>
 <footer class="container-fluid text-center">
@@ -1106,7 +1106,7 @@ $mail->MsgHTML($content);
 <script>
 $(document).ready(function(){
   // Add smooth scrolling to all links in navbar + footer link
-  //$(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+  //$(".navbar a,    a[href='#myPage']").on('click', function(event) {
 
     // Prevent default anchor click behavior
     //event.preventDefault();
