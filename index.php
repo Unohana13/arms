@@ -1089,7 +1089,7 @@ $mail->MsgHTML($content);
 
    if(!$mail->Send()) {
     echo "<script>$('#ModalMessageNotSuccess').modal('show')</script>";
-    var_dump($mail);
+    //var_dump($mail);
   } else {
   echo "<script>$('#ModalMessageSuccess').modal('show')</script>";
   } 
