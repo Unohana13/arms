@@ -45,7 +45,7 @@
 
 </br>
 <div class="container" colspan="8" align="center">
-	<Strong><span>Tenant Management <?php echo $_SESSION['id'] ?> <p class="fas fa-person-booth"></p> &nbsp;</span></strong>
+	<Strong><span>Tenant Messages <?php echo $_SESSION['id'] ?> &nbsp;</span></strong>
 
 </div>
 </br>
@@ -143,7 +143,7 @@
 			  <i class="fas fa-file-signature" data-toggle="tooltip" title="Purpose of Payment"></i></a>
 		</td>
 
-		<div id="deposit<?php echo $val['ID'];?>" class="modal fade">
+		<!--<div id="deposit<?php echo $val['ID'];?>" class="modal fade">
 						<div class="modal-dialog">
 							<div class="modal-content">
 								<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
@@ -162,7 +162,7 @@
 									</div>
 								</form>
 							</div>
-						</div>
+						</div>-->
 					</div>
 
 
