@@ -222,7 +222,11 @@
 			
 				<input name="date" type = "hidden" class="form-control" value="<?php echo $datetoday; ?>">
 					<div class="modal-header">
-						<div class="form-group">
+						<h4 class="modal-title">Please type the Message you want to be submitted to the onwer/operator</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					</div>
+					<div class="modal-body">
+					<div class="form-group">
 						<label>Please select the Full name of the tenant</label>
 				<select id="select123" name="tenantname" class="form-control">
 					<option>Please Select the tenant name</option>
@@ -239,10 +243,6 @@
 					?>
 				</select>
 						</div>
-						<h4 class="modal-title">Please type the Message you want to be submitted to the onwer/operator</h4>
-						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					</div>
-					<div class="modal-body">
                     <textarea class="form-control" id="messagetoonwer" name="message" placeholder="Comment" rows="10" ></textarea><br>
 					</div>
 					<div class="modal-footer">
