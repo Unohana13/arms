@@ -407,7 +407,7 @@ input[type=number] {
 																</div>
 																<div class="form-group">
 																<label>Age: </label>
-																<p><?php echo $TenantRES['Tenat_Age'] ?></p>
+																<p><?php echo $TenantRES['Tenant_Age'] ?></p>
 																</div>
 															<div class="form-group">
 																<label>Home Address: </label>

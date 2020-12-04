@@ -219,10 +219,23 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<form method="post" action="msgtoowner.php">
-				<input name="userpaymententID" type = "hidden" class="form-control" value="<?php echo $userpaymentID; ?>">
-				<input name="date" type = "hidden" class="form-control" value="<?php echo $datetoday; ?>">
-					<div class="modal-header">
-						<h4 class="modal-title">Please type the Message you want to be submitted to the onwer/operator</h4>
+				<div class="modal-header">
+				<label>Please select the Full name of the tenant</label>
+				<select id="select3" name="editroomnumber" class="form-control">
+					<option value="<?php echo $TenantRES['roomnumber']; ?>"><?php echo $TenantRES['location']; ?> Room <?php echo $TenantRES['roomnumber']; ?></option>
+					<?php
+						$Continentqry = $mysqli->query('SELECT DISTINCT Tenant_Name, location FROM tenant Where status!='Archived' AND status!='Pending' ORDER BY Tenant_Name ASC ');
+						while($crow = $Continentqry->fetch_assoc()) {
+							$n = 0;
+							echo "<option value = '{$crow['Tenant_Name']}'";
+							echo ' selected="selected"';
+							echo ">{$crow['Tanant_Name']}</option>\n";
+							$n++;
+				
+					?>
+				</select>
+						<br>
+						<h4 class="modal-title">Please type the Message you want to be submitted to the Tenant</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
 					<div class="modal-body">
