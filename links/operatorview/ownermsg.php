@@ -228,19 +228,7 @@
 					<div class="modal-body">
 					<div class="form-group">
 						<label>Please select the Full name of the tenant</label>
-				<select id="select123" name="tenantname" class="form-control">
-					<option>Please Select the tenant name</option>
-					<?php
-						$Continentqry = $mysqli->query('SELECT DISTINCT Tenant_Name FROM tenant ');
-						while($crow = $Continentqry->fetch_assoc()) {
-							$n = 0;
-							echo "<option value = '{$crow['Tenant_Name']}'";
-							if(isset($_REQUEST['tenantname']) and $_REQUEST['tb1']==$crow['Tenant_Name'])
-							echo ' selected="selected"';
-							echo ">{$crow['Tanant_Name']}</option>\n";
-							$n++;
 				
-					?>
 				</select>
 						</div>
                     <textarea class="form-control" id="messagetoonwer" name="message" placeholder="Comment" rows="10" ></textarea><br>
