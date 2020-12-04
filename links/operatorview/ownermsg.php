@@ -45,7 +45,7 @@
 
 </br>
 <div class="container" colspan="8" align="center">
-	<Strong><span>Tenant Messages <?php echo $_SESSION['id'] ?> &nbsp;</span></strong>
+	<Strong><span>Tenant Management <?php echo $_SESSION['id'] ?> <p class="fas fa-person-booth"></p> &nbsp;</span></strong>
 
 </div>
 </br>
@@ -58,7 +58,7 @@
 
 						 </div>
 
-						<!--<a href="#addTenant" class="btn btn-primary" data-toggle="modal"><span>Write Message</span></a>-->
+						<a href="#addTenant" class="btn btn-primary" data-toggle="modal"><span>Write Message</span></a>
 
 				</div>
 			</form>
@@ -109,10 +109,7 @@
 	<table class="table table-bordered table-striped" id="empTable">
 		<thead>
 			<tr class="header">
-				<th style="text-align:center;">Tenant ID</th>
-				<th style="text-align:center;">Tenant Name</th>
-				<th style="text-align:center;">Location</th>
-				<th style="text-align:center;">Room Number</th>
+				<th style="text-align:center;">ID</th>
 				<th style="text-align:center;">Date Submitted</th>
 				<th style="text-align:center;">Message</th>
 			</tr>
@@ -126,15 +123,12 @@
 
 				while($val = $result->fetch_assoc()){
 					$idEdit = $val['ID'];
-					$tenantName = $val['tenant_name'];
-					$tenantid = $val['tenant_id'];
+					$tenantName = $val['tenantname'];
+					$tenantid = $val['Tenant_ID'];
 			?>
 			<tr>
 				<?php $n++; ?>
-				<td style="text-align:center;"><?php echo $val['tenant_id']; ?></td>
-				<td style="text-align:center;"><?php echo $val['tenant_name']; ?></td>
-				<td style="text-align:center;"><?php echo $val['location']; ?></td>
-				<td style="text-align:center;"><?php echo $val['roomnumber']; ?></td>
+				<td style="text-align:center;"><?php echo $val['ID']; ?></td>
 				<td style="text-align:center;"><?php echo $val['date']; ?></td>
 				<?php $Hello[$n-2] = $val['Tenant_Id']; ?>
 
@@ -143,7 +137,7 @@
 			  <i class="fas fa-file-signature" data-toggle="tooltip" title="Purpose of Payment"></i></a>
 		</td>
 
-		<!--<div id="deposit<?php echo $val['ID'];?>" class="modal fade">
+		<div id="deposit<?php echo $val['ID'];?>" class="modal fade">
 						<div class="modal-dialog">
 							<div class="modal-content">
 								<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
@@ -163,7 +157,7 @@
 								</form>
 							</div>
 						</div>
-					</div>-->
+					</div>
 
 
 				<div id="msg<?php echo $val['ID'];?>" class="modal fade">
@@ -219,24 +213,10 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<form method="post" action="msgtoowner.php">
-				<div class="modal-header">
-				<label>Please select the Full name of the tenant</label>
-				<select id="select123" name="tenantname" class="form-control">
-					<option>Please Select the tenant name</option>
-					<?php
-						$Continentqry = $mysqli->query('SELECT DISTINCT Tenant_Name FROM tenant Where status !='Archived' AND status !='Pending' ORDER BY Tenant_Name ASC ');
-						while($crow = $Continentqry->fetch_assoc()) {
-							$n = 0;
-							echo "<option value = '{$crow['Tenant_Name']}'";
-							if(isset($_REQUEST['tenantname']) and $_REQUEST['tb1']==$crow['Tenant_Name'])
-							echo ' selected="selected"';
-							echo ">{$crow['Tanant_Name']}</option>\n";
-							$n++;
-				
-					?>
-				</select>
-						<br>
-						<h4 class="modal-title">Please type the Message you want to be submitted to the Tenant</h4>
+				<input name="userpaymententID" type = "hidden" class="form-control" value="<?php echo $userpaymentID; ?>">
+				<input name="date" type = "hidden" class="form-control" value="<?php echo $datetoday; ?>">
+					<div class="modal-header">
+						<h4 class="modal-title">Please type the Message you want to be submitted to the onwer/operator</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
 					<div class="modal-body">
