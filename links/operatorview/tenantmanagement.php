@@ -395,6 +395,63 @@ input[type=number] {
 																	?>
 																</select>
 
+															<div class="form-group">
+																<label>Full Name: <?php echo $TenantRES['Tenant_Name'] ?></label>
+																</div>
+
+															<div class="form-group">
+																<label>Birthdate</label>
+																<input class="form-control" id ="txtDate" type="date" name="editbirthday" max="2015-01-01" value="<?php echo $TenantRES['Birthdate']; ?>">
+															</div>
+															<div class="form-group">
+																<label>Home Address</label>
+																<textarea name = "edithomeaddress" class="form-control"><?php echo $TenantRES['Home_Address']; ?></textarea>
+															</div>
+															<div class="form-group">
+																<label>Phone Number <span class="badge badge-info">Format (xxx-xxx-xxxx)</span></label>
+																	<input type="tel" name="editphonenumber" pattern="^\d{3}-\d{3}-\d{4}$" class="form-control" value="<?php echo $TenantRES['Tenant_Contact']; ?>"required >
+															</div>
+															<div class="form-group">
+																<label>Guardian Full Name <span class="badge badge-info">Format("Letters Only")</span></label>
+																<input name="editguardianFullname" class="form-control" pattern="[A-Za-z ]+" value="<?php echo $TenantRES['Guardian_Name']; ?>">
+															</div>
+															<div class="form-group">
+																<label>Guardian Phone Number <span class="badge badge-info">Format (xxx-xxx-xxxx)</span></label>
+																	<input type="tel" name="editguardianphonenumber" pattern="^\d{3}-\d{3}-\d{4}$" class="form-control" value = "<?php echo $TenantRES['Guardian_Contact']; ?>"required >
+															</div>
+															<div class="form-group">
+																<label>Address of present apartment</label>
+																<textarea name = "editaddressofpresent" class="form-control"><?php echo $TenantRES['Address_Of_Present_Apartment']; ?></textarea>
+															</div>
+															<div class="form-group">
+																<label>Reason For Leaving</label>
+																<textarea name = "editreasonforleaving" class="form-control"><?php echo $TenantRES['Reason_For_Leaving']; ?></textarea>
+															</div>
+															<div class="form-group">
+																<label>Years of stay in present apartment</label>
+																<input name = "edityearsofstayinpresent" type = "number" min = "0" max = "99" class="form-control" value="<?php echo $TenantRES['Years_Of_Stay_In_Present_Apartment']; ?>">
+															</div>
+															<div class="form-group">
+																<label>Name of school or work</label>
+																<textarea name = "editnameofschoolwork" class="form-control" ><?php echo $TenantRES['Name_Of_Schoolwork']; ?></textarea>
+															</div>
+															<div class="form-group">
+																<label>Address of school or work</label>
+																<textarea name = "editaddressofschoolwork" class="form-control"><?php echo $TenantRES['Address_Of_Present_Apartment']; ?></textarea>
+															</div>
+															<div class="form-group">
+																<label>Position in Company <span class="badge badge-info">Format("Letters Only")</span></label>
+																<input name="editpositionincompany" class="form-control" pattern="[A-Za-z ]+" value="<?php echo $TenantRES['Position_In_Company']; ?>">
+															</div>
+															<div class="form-group">
+																<label>Name Of immediate Supervisor <span class="badge badge-info">Format("Letters Only")</span></label>
+																<input name="editNameimmediatesupervisor" class="form-control" pattern="[A-Za-z ]+" value="<?php echo $TenantRES['Name_Of_Immediate_Supervisor']; ?>">
+															</div>
+															<div class="form-group">
+																<label>Number of years in present position</label>
+																<input name = "edityearsinpresentposition" type = "number" min = "0" max = "99" class="form-control" value="<?php echo $TenantRES['Number_Of_years_In_present_Position']; ?>">
+															</div>
+
 															</div>
 															<div>
 															
