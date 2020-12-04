@@ -396,7 +396,8 @@ input[type=number] {
 																</select>
 
 															<div class="form-group">
-																<label>Full Name: <?php echo $TenantRES['Tenant_Name'] ?></label>
+																<label>Full Name: </label>
+																<p><?php echo $TenantRES['Tenant_Name'] ?></p>
 																</div>
 
 															<div class="form-group">
