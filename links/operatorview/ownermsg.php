@@ -162,8 +162,8 @@
 									</div>
 								</form>
 							</div>
-						</div>-->
-					</div>
+						</div>
+					</div>-->
 
 
 				<div id="msg<?php echo $val['ID'];?>" class="modal fade">
