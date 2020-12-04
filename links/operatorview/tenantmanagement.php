@@ -57,7 +57,7 @@ input[type=number] {
 
 	</br>
 	<div class="container" colspan="8" align="center">
-		<Strong><span>Tenant Management <p class="fas fa-person-booth"></p> &nbsp;</span></strong>
+		<Strong><span>Tenant Messages</strong>
 
 	</div>
 </br>
@@ -70,7 +70,7 @@ input[type=number] {
 
 							 </div>
 
-							<a href="#addTenant" class="btn btn-primary" data-toggle="modal"><span>Add New Tenant</span></a>
+							<a href="#addTenant" class="btn btn-primary" data-toggle="modal"><span>Write Message</span></a>
 
 					</div>
 				</form>
@@ -86,12 +86,12 @@ input[type=number] {
 			//Main query
 			$pages = new Paginator;
 			$pages->default_ipp = 10;
-			$sql_forms = $mysqli->query("SELECT * FROM tenant WHERE status !='Archived' 1 ".$condition."");
+			$sql_forms = $mysqli->query("SELECT * FROM tenant WHERE status !='Archived' AND 1 ".$condition."");
 			$pages->items_total = $sql_forms->num_rows;
 			$pages->mid_range = 9;
 			$pages->paginate();
 
-			$result	=	$mysqli->query("SELECT * FROM tenant WHERE status !='Archived' 1 ".$condition." ORDER BY Tenant_Name ASC ".$pages->limit."");
+			$result	=	$mysqli->query("SELECT * FROM tenant WHERE status !='Archived' AND 1 ".$condition." ORDER BY Tenant_Name ASC ".$pages->limit."");
 		}else {
       $pages = new Paginator;
 			$pages->default_ipp = 10;
