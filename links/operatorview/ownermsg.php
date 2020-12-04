@@ -228,6 +228,7 @@
 						while($crow = $Continentqry->fetch_assoc()) {
 							$n = 0;
 							echo "<option value = '{$crow['Tenant_Name']}'";
+							if(isset($_REQUEST['editroomnumber']) and $_REQUEST['tb1']==$crow['Tenant_Name'])
 							echo ' selected="selected"';
 							echo ">{$crow['Tanant_Name']}</option>\n";
 							$n++;
