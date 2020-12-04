@@ -221,8 +221,8 @@
 				<form method="post" action="msgtoowner.php">
 				<div class="modal-header">
 				<label>Please select the Full name of the tenant</label>
-				<select id="select3" name="editroomnumber" class="form-control">
-					<option value="<?php echo $TenantRES['roomnumber']; ?>"><?php echo $TenantRES['location']; ?> Room <?php echo $TenantRES['roomnumber']; ?></option>
+				<select id="select123" name="editroomnumber" class="form-control">
+					<option>Please Select the tenant name</option>
 					<?php
 						$Continentqry = $mysqli->query('SELECT DISTINCT Tenant_Name, location FROM tenant Where status !='Archived' AND status !='Pending' ORDER BY Tenant_Name ASC ');
 						while($crow = $Continentqry->fetch_assoc()) {
