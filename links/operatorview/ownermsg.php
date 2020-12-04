@@ -74,12 +74,12 @@
 		//Main query
 		$pages = new Paginator;
 		$pages->default_ipp = 10;
-		$sql_forms = $mysqli->query("SELECT * FROM tenant WHERE status !='Archived' 1 ".$condition."");
+		$sql_forms = $mysqli->query("SELECT * FROM tenan_message WHERE  1 ".$condition." AND status !='Archived' 1");
 		$pages->items_total = $sql_forms->num_rows;
 		$pages->mid_range = 9;
 		$pages->paginate();
 
-		$result	=	$mysqli->query("SELECT * FROM tenant WHERE status !='Archived' 1 ".$condition." ORDER BY Tenant_Name ASC ".$pages->limit."");
+		$result	=	$mysqli->query("SELECT * FROM tenan_message WHERE  1 ".$condition." AND status !='Archived' 1 ORDER BY date DESC ".$pages->limit."");
 	}else {
   $pages = new Paginator;
 		$pages->default_ipp = 10;
@@ -88,7 +88,7 @@
 		$pages->mid_range = 9;
 		$pages->paginate();
 
-		$result	=	$mysqli->query("SELECT * FROM tenan_message ORDER BY ID ASC ".$pages->limit."");
+		$result	=	$mysqli->query("SELECT * FROM tenan_message ORDER BY date DESC ".$pages->limit."");
 }
 	?>
 	<div class="clearfix"></div>
