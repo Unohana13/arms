@@ -86,12 +86,12 @@ input[type=number] {
 			//Main query
 			$pages = new Paginator;
 			$pages->default_ipp = 10;
-			$sql_forms = $mysqli->query("SELECT * FROM tenant WHERE  1 ".$condition." AND status !='Archived'");
+			$sql_forms = $mysqli->query("SELECT * FROM tenant WHERE  1 ".$condition."");
 			$pages->items_total = $sql_forms->num_rows;
 			$pages->mid_range = 9;
 			$pages->paginate();
 
-			$result	=	$mysqli->query("SELECT * FROM tenant WHERE  1 ".$condition." AND status !='Archived' ORDER BY Tenant_Name ASC ".$pages->limit."");
+			$result	=	$mysqli->query("SELECT * FROM tenant WHERE  1 ".$condition." ORDER BY Tenant_Name ASC ".$pages->limit."");
 		}else {
       $pages = new Paginator;
 			$pages->default_ipp = 10;
