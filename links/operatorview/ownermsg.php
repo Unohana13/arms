@@ -233,7 +233,7 @@
 					<option>Please Select the tenant name</option>
 					<?php
 
-						$Continentqry = $mysqli->query("SELECT Tenant_Name FROM tenant Where status !='Archived' AND status !='Pending'");
+						$Continentqry = $mysqli->query("SELECT Tenant_Name FROM tenant Where status !='Archived' AND status !='Pending' ORDER BY Tenant_Name ASC");
 						while($crow = $Continentqry->fetch_assoc()) {
 							$n = 0;
 							echo "<option value = '{$crow['Tenant_Name']}'";
@@ -241,6 +241,7 @@
 							echo ' selected="selected"';
 							echo ">{$crow['Tanant_Name']}</option>\n";
 							$n++;
+						}
 				
 					?>
 				</select>
