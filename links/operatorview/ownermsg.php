@@ -224,7 +224,7 @@
 				<select id="select3" name="editroomnumber" class="form-control">
 					<option value="<?php echo $TenantRES['roomnumber']; ?>"><?php echo $TenantRES['location']; ?> Room <?php echo $TenantRES['roomnumber']; ?></option>
 					<?php
-						$Continentqry = $mysqli->query('SELECT DISTINCT Tenant_Name, location FROM tenant Where status!='Archived' AND status!='Pending' ORDER BY Tenant_Name ASC ');
+						$Continentqry = $mysqli->query('SELECT DISTINCT Tenant_Name, location FROM tenant Where status !='Archived' AND status !='Pending' ORDER BY Tenant_Name ASC ');
 						while($crow = $Continentqry->fetch_assoc()) {
 							$n = 0;
 							echo "<option value = '{$crow['Tenant_Name']}'";
