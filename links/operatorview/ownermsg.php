@@ -232,7 +232,8 @@
 						<select id="select123" name="tenantname" class="form-control">
 					<option>Please Select the tenant name</option>
 					<?php
-						$Continentqry = $mysqli->query('SELECT DISTINCT Tenant_Name FROM tenant Where status !='Archived' AND status !='Pending' ORDER BY Tenant_Name ASC ');
+
+						$Continentqry = $mysqli->query('SELECT Tenant_Name FROM tenant Where status !="Archived" AND status !="Pending" ORDER BY Tenant_Name ASC ');
 						while($crow = $Continentqry->fetch_assoc()) {
 							$n = 0;
 							echo "<option value = '{$crow['Tenant_Name']}'";
