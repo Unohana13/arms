@@ -239,7 +239,7 @@
 							echo "<option value = '{$crow['Tenant_Name']}'";
 							if(isset($_REQUEST['tenantname']) and $_REQUEST['tb1']==$crow['Tenant_Name'])
 							echo ' selected="selected"';
-							echo ">{$crow['Tanant_Name']}</option>\n";
+							echo ">{$crow['Tenant_Name']}</option>\n";
 							$n++;
 						}
 				
