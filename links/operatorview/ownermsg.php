@@ -220,23 +220,11 @@
 			<div class="modal-content">
 				<form method="post" action="msgtoowner.php">
 				<div class="modal-header">
-				<?php
-
-															$sqled = "SELECT * from tenant where Tenant_Id =?";
-															if($stmt = $mysqli->prepare($sqled)){
-																$stmt->bind_param("s", $paramTen);
-																$paramTen = $idEdit;
-																	$stmt->execute();
-																	$resulthere = $stmt->get_result();
-																	 $TenantRES = $resulthere->fetch_assoc();
-
-																	}
-																	$stmt->close(); ?>
 				<label>Please select the Full name of the tenant</label>
 				<select id="select123" name="tenantname" class="form-control">
 					<option>Please Select the tenant name</option>
 					<?php
-						$Continentqry = $mysqli->query('SELECT DISTINCT Tenant_Name, location FROM tenant Where status !='Archived' AND status !='Pending' ORDER BY Tenant_Name ASC ');
+						$Continentqry = $mysqli->query('SELECT DISTINCT Tenant_Name FROM tenant Where status !='Archived' AND status !='Pending' ORDER BY Tenant_Name ASC ');
 						while($crow = $Continentqry->fetch_assoc()) {
 							$n = 0;
 							echo "<option value = '{$crow['Tenant_Name']}'";
