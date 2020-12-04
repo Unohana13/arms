@@ -45,7 +45,7 @@
 
 </br>
 <div class="container" colspan="8" align="center">
-	<Strong><span>Tenant Management <?php echo $_SESSION['id'] ?> <p class="fas fa-person-booth"></p> &nbsp;</span></strong>
+	<Strong><span>Tenant Messages <?php echo $_SESSION['id'] ?> <p class="fas fa-person-booth"></p> &nbsp;</span></strong>
 
 </div>
 </br>
@@ -68,7 +68,7 @@
 		$condition		=	"";
 		if(isset($_GET['tb1']) and $_GET['tb1']!="")
 		{
-			$condition		.=	" AND Tenant_Name LIKE'%".$_GET['tb1']."%'";
+			$condition		.=	" AND tenant_name LIKE'%".$_GET['tb1']."%'";
 		}
 
 		//Main query
