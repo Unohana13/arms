@@ -231,7 +231,7 @@
 				<select id="select123" name="tenantname" class="form-control">
 					<option>Please Select the tenant name</option>
 					<?php
-						$Continentqry = $mysqli->query('SELECT Tenant_Name FROM tenant ');
+						$Continentqry = $mysqli->query('SELECT DISTINCT Tenant_Name FROM tenant ');
 						while($crow = $Continentqry->fetch_assoc()) {
 							$n = 0;
 							echo "<option value = '{$crow['Tenant_Name']}'";
