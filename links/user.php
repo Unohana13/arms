@@ -101,7 +101,7 @@ if(isset($_POST['changep'])){
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -307,19 +307,19 @@ body {
   display: block;
 }
 .user-name{
-  font-size: 13px;
+  font-size: 18px;
 }
 .sidebar-wrapper .sidebar-header .user-info .user-role {
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .sidebar-wrapper .sidebar-header .user-info .user-status {
-  font-size: 11px;
+  font-size: 16px;
   margin-top: 4px;
 }
 
 .sidebar-wrapper .sidebar-header .user-info .user-status i {
-  font-size: 8px;
+  font-size: 12px;
   margin-right: 4px;
   color: #5cb85c;
 }
@@ -354,7 +354,7 @@ body {
 
 .sidebar-wrapper .sidebar-menu ul li a i {
   margin-right: 10px;
-  font-size: 12px;
+  font-size: 16px;
   width: 30px;
   height: 30px;
   line-height: 30px;
@@ -368,7 +368,7 @@ body {
 }
 
 .sidebar-wrapper .sidebar-menu .sidebar-dropdown > a:after {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Roboto";
   font-weight: 900;
   content: "\f105";
   font-style: normal;
@@ -392,12 +392,12 @@ body {
 
 .sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu li {
   padding-left: 25px;
-  font-size: 13px;
+  font-size: 18px;
 }
 
 .sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu li a:before {
   content: "\f111";
-  font-family: "Font Awesome 5 Free";
+  font-family: "Roboto";
   font-weight: 400;
   font-style: normal;
   display: inline-block;
@@ -406,7 +406,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin-right: 10px;
-  font-size: 8px;
+  font-size: 12px;
 }
 
 .sidebar-wrapper .sidebar-menu ul li a span.label,
@@ -442,7 +442,7 @@ body {
 }
 
 .sidebar-footer > a {
-  font-size: 12px;
+  font-size: 16px;
   flex-grow: 1;
   text-align: center;
   height: 30px;
@@ -450,7 +450,7 @@ body {
   position: relative;
 }
 #FooA, #FooB{
-  font-family: calibri;
+  font-family: Roboto;
 }
 .sidebar-footer > a .notification {
   position: absolute;
@@ -459,7 +459,7 @@ body {
 
 .badge-sonar {
   display: inline-block;
-  background: #980303;
+  background: #006ad7;
   border-radius: 50%;
   height: 8px;
   width: 8px;
@@ -472,7 +472,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  border: 2px solid #980303;
+  border: 2px solid #006ad7;
   opacity: 0;
   border-radius: 50%;
   width: 100%;
@@ -739,26 +739,26 @@ $("#show-sidebar").click(function() {
           <li>
             <a href="userview/paymentstatus.php" target="myIframe">
               <i class="fa fa-book"></i>
-              <span style="font-size:13px;">Payment Status Update</span>
+              <span style="font-size:18px;">Payment Status Update</span>
             </a>
           </li>
           <li>
             <a href="userview/userpayment.php" target="myIframe">
               <i class="fa fa-book"></i>
-              <span style="font-size:13px;">User payment</span>
+              <span style="font-size:18px;">User payment</span>
             </a>
           </li>
           <li>
             <a href="userview/ownermsg.php" target="myIframe">
               <i class="fa fa-book"></i>
-              <span style="font-size:13px;">Message the Owner</span>
+              <span style="font-size:18px;">Message the Owner</span>
             </a>
           </li>
           
           <li>
             <a href="userview/operatormsg.php" target="myIframe">
               <i class="fa fa-book"></i>
-              <span style="font-size:13px;">Operatos Messages</span>
+              <span style="font-size:18px;">Operatos Messages</span>
             </a>
           </li>
 
