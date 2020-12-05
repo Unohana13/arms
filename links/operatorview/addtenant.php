@@ -153,9 +153,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $occupantupdate = "UPDATE room SET number=?  where roomnumber =? AND location=?";  
         if($stmt = $mysqli->prepare($occupantupdate)){
           $stmt->bind_param("iis",$occupants, $roomnumber, $location);
-          $occupants = $_POST['editoccupants'];
-          $roomnumber = $_POST['editroomnumber'];
-          $location = $_POST['editlocation'];
+          $occupants = 0;
+          $roomnumber = $_POST['editOldroomnumber'];
+          $location = $_POST['editOldlocation'];
             $stmt->execute();
             $stmt->close();
             echo "<script>alert('$location');
