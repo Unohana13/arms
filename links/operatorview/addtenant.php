@@ -129,30 +129,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     
     if(empty($roomnumber_err) && $occupants_errcheck == 0){  
-    $sqleditmp = "UPDATE tenant SET roomnumber =?, location=?, Tenant_Name=?, Birthdate=?, Home_Address=?, Tenant_Age=?, Tenant_Contact=?, Guardian_Name=?, Guardian_Contact=?, Address_Of_Present_Apartment=?, Reason_For_Leaving=?, Years_Of_Stay_In_Present_Apartment=?, Name_Of_Schoolwork=?, Address_Of_Schoolwork=?, Position_In_Company=?, Name_Of_Immediate_Supervisor=?, Number_Of_years_In_present_Position=?, occupants=? where Tenant_Id =?";
+    $sqleditmp = "UPDATE tenant SET roomnumber =?, location=? where Tenant_Id =?";
     if($stmt = $mysqli->prepare($sqleditmp)){
-      $stmt->bind_param("issssisssssissssiii", $editroomnumber, $editlocation, $editfullname, $editbirthday, $edithomeaddress, $editage, $editphonenumber, $editguardianFullname, $editguardianphonenumber, $editaddressofpresent, $editreasonforleaving, $edityearsofstayinpresent, $editnameofschoolwork, $editaddressofschoolwork, $editpositionincompany, $editnameofimmediatesupervisor, $edityearsinpresentposition, $occupantsedit1, $editTenant_id);
+      $stmt->bind_param("is", $editroomnumber, $editlocation);
       $editroomnumber = $_POST['editroomnumber'];
       $editlocation = $_POST['editlocation'];
-      $editfullname = $_POST['editfullname'];
-      $editbirthday = $_POST['editbirthday'];
-      $edithomeaddress = $_POST['edithomeaddress'];
-      $editfrom = new DateTime($_POST['editbirthday']);
-      $editto   = new DateTime('today');
-      $editage = $editfrom->diff($editto)->y;
-      $editphonenumber = $_POST['editphonenumber'];
-      $editguardianFullname = $_POST['editguardianFullname'];
-      $editguardianphonenumber = $_POST['editguardianphonenumber'];
-      $editaddressofpresent = $_POST['editaddressofpresent'];
-      $editreasonforleaving = $_POST['editreasonforleaving'];
-      $edityearsofstayinpresent = $_POST['edityearsofstayinpresent'];
-      $editnameofschoolwork = $_POST['editnameofschoolwork'];
-      $editaddressofschoolwork = $_POST['editaddressofschoolwork'];
-      $editpositionincompany = $_POST['editpositionincompany'];
-      $editnameofimmediatesupervisor = $_POST['editNameimmediatesupervisor'];
-      $edityearsinpresentposition = $_POST['edityearsinpresentposition'];
-      $occupantsedit1 = $_POST['editoccupants'];
-      $editTenant_id = $_POST['edittetenantID'];
         $stmt->execute();
       }
         $stmt->close();
