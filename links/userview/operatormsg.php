@@ -1,4 +1,4 @@
-<?php session_start(); include_once('../config.php'); include('../paginator.class.php'); $userpaymentID  = $_SESSION['id'];?>
+<?php session_start(); include_once('../config.php'); include('../paginator.class.php'); include('addreservation.php'); $userpaymentID  = $_SESSION['id'];?>
 <!doctype html>
 <html lang="en-US" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:addthis="https://www.addthis.com/help/api-spec"  prefix="og: http://ogp.me/ns#" class="no-js">
 <head>
@@ -45,7 +45,7 @@
 
 </br>
 <div class="container" colspan="8" align="center">
-	<Strong><span>Tenant Messages <?php echo $_SESSION['id'] ?> <p class="fas fa-person-booth"></p> &nbsp;</span></strong>
+	<Strong><span>Operator Messages <?php echo $_SESSION['id'] ?> <p class="fas fa-person-booth"></p> &nbsp;</span></strong>
 
 </div>
 </br>
@@ -58,7 +58,7 @@
 
 						 </div>
 
-						<a href="#addTenant" class="btn btn-primary" data-toggle="modal"><span>Write Message</span></a>
+						<!--<a href="#addTenant" class="btn btn-primary" data-toggle="modal"><span>Write Message</span></a>-->
 
 				</div>
 			</form>
@@ -68,18 +68,18 @@
 		$condition		=	"";
 		if(isset($_GET['tb1']) and $_GET['tb1']!="")
 		{
-			$condition		.=	" AND tenant_name LIKE'%".$_GET['tb1']."%'";
+			$condition		.=	" AND Tenant_Name LIKE'%".$_GET['tb1']."%'";
 		}
 
 		//Main query
 		$pages = new Paginator;
 		$pages->default_ipp = 10;
-		$sql_forms = $mysqli->query("SELECT * FROM tenan_message WHERE  1 ".$condition." AND status !='Archived' 1");
+		$sql_forms = $mysqli->query("SELECT * FROM tenant WHERE status !='Archived' 1 ".$condition."");
 		$pages->items_total = $sql_forms->num_rows;
 		$pages->mid_range = 9;
 		$pages->paginate();
 
-		$result	=	$mysqli->query("SELECT * FROM tenan_message WHERE  1 ".$condition." AND status !='Archived' 1 ORDER BY date DESC ".$pages->limit."");
+		$result	=	$mysqli->query("SELECT * FROM tenant WHERE status !='Archived' 1 ".$condition." ORDER BY Tenant_Name ASC ".$pages->limit."");
 	}else {
   $pages = new Paginator;
 		$pages->default_ipp = 10;
@@ -88,7 +88,7 @@
 		$pages->mid_range = 9;
 		$pages->paginate();
 
-		$result	=	$mysqli->query("SELECT * FROM tenan_message ORDER BY date DESC ".$pages->limit."");
+		$result	=	$mysqli->query("SELECT * FROM tenan_message where location ='operator' ORDER BY ID ASC ".$pages->limit."");
 }
 	?>
 	<div class="clearfix"></div>
@@ -109,10 +109,7 @@
 	<table class="table table-bordered table-striped" id="empTable">
 		<thead>
 			<tr class="header">
-				<th style="text-align:center;">Tenant_ID</th>
-				<th style="text-align:center;">Tenant Name</th>
-				<th style="text-align:center;">Location</th>
-				<th style="text-align:center;">Room</th>
+				<th style="text-align:center;">ID</th>
 				<th style="text-align:center;">Date Submitted</th>
 				<th style="text-align:center;">Message</th>
 			</tr>
@@ -131,10 +128,7 @@
 			?>
 			<tr>
 				<?php $n++; ?>
-				<td style="text-align:center;"><?php echo $val['tenant_id']; ?></td>
-				<td style="text-align:center;"><?php echo $val['tenant_name']; ?></td>
-				<td style="text-align:center;"><?php echo $val['location']; ?></td>
-				<td style="text-align:center;"><?php echo $val['roomnumber']; ?></td>
+				<td style="text-align:center;"><?php echo $val['ID']; ?></td>
 				<td style="text-align:center;"><?php echo $val['date']; ?></td>
 				<?php $Hello[$n-2] = $val['Tenant_Id']; ?>
 
@@ -219,34 +213,13 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<form method="post" action="msgtoowner.php">
-			
+				<input name="userpaymententID" type = "hidden" class="form-control" value="<?php echo $userpaymentID; ?>">
 				<input name="date" type = "hidden" class="form-control" value="<?php echo $datetoday; ?>">
 					<div class="modal-header">
-						<h4 class="modal-title">Please type the Message you want to be submitted to the Tenant</h4>
+						<h4 class="modal-title">Please type the Message you want to be submitted to the onwer/operator</h4>
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
 					<div class="modal-body">
-					<div class="form-group">
-						<label>Please select the Full name of the tenant</label>
-						<?php $initial = "0"; ?>
-						<select id="select123" name="tenantname" class="form-control">
-					<option>Please Select the tenant name</option>
-					<?php
-
-						$Continentqry = $mysqli->query("SELECT Tenant_Name FROM tenant Where status !='Archived' AND status !='Pending' ORDER BY Tenant_Name ASC");
-						while($crow = $Continentqry->fetch_assoc()) {
-							$n = 0;
-							echo "<option value = '{$crow['Tenant_Name']}'";
-							if(isset($_REQUEST['tenantname']) and $_REQUEST['tb1']==$crow['Tenant_Name'])
-							echo ' selected="selected"';
-							echo ">{$crow['Tenant_Name']}</option>\n";
-							$n++;
-						}
-				
-					?>
-				</select>
-				
-						</div>
                     <textarea class="form-control" id="messagetoonwer" name="message" placeholder="Comment" rows="10" ></textarea><br>
 					</div>
 					<div class="modal-footer">
