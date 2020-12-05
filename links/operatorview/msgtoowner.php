@@ -20,6 +20,17 @@ $errormsg = "";
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(isset($_POST['adduserpayment']))
     {
+      $sql2 = "SELECT Tenant_Id FROM tenant WHERE Tenant_Name=?";
+          if($stmt = $mysqli->prepare($sql2)){
+            $stmt->bind_param("i", $romnumber1);
+              $romnumber1 = $_POST['tenantname'];
+              $stmt->execute();
+      
+              $result = $stmt->get_result();
+              $EditResult = $result->fetch_assoc();
+              $name123 = $EditResult['Tenant_Id'];
+              $stmt->close();
+            }
           $sqlsssss = "INSERT INTO tenan_message (tenant_name, location, roomnumber, tenant_id, message, date) VALUES (?, ?, ?, ?, ?, ?)";
   
           if($stmt = $mysqli->prepare($sqlsssss)){
@@ -28,7 +39,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
               $tenantname = $_POST['tenantname'];
               $location1 = "operator";
               $roomnumber1 = "operator";
-              $id = 99;
+              $id = $name123;
               $msg = $_POST['message'];
               $date = $_POST['date'];
               // Set parameters
