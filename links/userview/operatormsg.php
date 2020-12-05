@@ -4,7 +4,7 @@ $val = $result->fetch_assoc();
 $TID =  $val['Tenant_Id'];
 $stmt->close();
 $resultss = $mysqli->query("SELECT * FROM tenant WHERE Tenant_Id='$TID'");
-$vals = $results->fetch_assoc();
+$vals = $resultss->fetch_assoc();
 $TN =  $vals['Tenant_Name'];
 $stmt->close();
 ?>
