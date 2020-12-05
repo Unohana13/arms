@@ -109,7 +109,6 @@
 	<table class="table table-bordered table-striped" id="empTable">
 		<thead>
 			<tr class="header">
-				<th style="text-align:center;">ID</th>
 				<th style="text-align:center;">Date Submitted</th>
 				<th style="text-align:center;">Message</th>
 			</tr>
@@ -128,7 +127,6 @@
 			?>
 			<tr>
 				<?php $n++; ?>
-				<td style="text-align:center;"><?php echo $val['ID']; ?></td>
 				<td style="text-align:center;"><?php echo $val['date']; ?></td>
 				<?php $Hello[$n-2] = $val['Tenant_Id']; ?>
 
