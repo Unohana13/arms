@@ -630,6 +630,7 @@ html{
 
 <!-- location1 -->
   <div id="mylocation1" class="carousel slide" data-ride="carousel" style="top:-20px;">
+    <br>
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#mylocation1" data-slide-to="0" class="active"></li>
