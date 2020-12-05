@@ -896,9 +896,6 @@ html{
   </div>
 <!-- Container (Portfolio Section) -->
 
-
-<section class="section">
-  <h2 class="text-center">Contact us</h2>
   <!--<div class="card">
     <div class="card-body">
       <div id="map-container-google-12" class="z-depth-1-half map-container-7" style="height: 200px">
@@ -910,6 +907,8 @@ html{
 
 </br>
 <div id="contact" class="container-fluid">
+<section class="section">
+  <h2 class="text-center">Contact us</h2>
   <div class="row">
     <div class="col-sm-5">
       <p>Contact us and we'll get back to you within 24 hours.</p>
