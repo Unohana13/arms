@@ -629,7 +629,7 @@ html{
 <br></br>
 
 <!-- location1 -->
-  <div id="mylocation1" class="carousel slide" data-ride="carousel" style="top:15px;">
+  <div id="mylocation1" class="carousel slide" data-ride="carousel" style="top:1px;">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#mylocation1" data-slide-to="0" class="active"></li>
@@ -905,7 +905,7 @@ html{
     </div>
   </div>-->
 
-</br>
+<br></br>
 <div id="contact" class="container-fluid">
 <section class="section">
   <h2 class="text-center">Contact us</h2>
