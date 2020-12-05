@@ -1,4 +1,13 @@
-<?php session_start(); include_once('../config.php'); include('../paginator.class.php'); include('addreservation.php'); $userpaymentID  = $_SESSION['id'];?>
+<?php session_start(); include_once('../config.php'); include('../paginator.class.php'); include('addreservation.php'); $userpaymentID  = $_SESSION['id'];
+$result = $mysqli->query("SELECT * FROM useraccount WHERE id='$userpaymentID'");
+$val = $result->fetch_assoc();
+$TID =  $val['Tenant_Id'];
+
+$resultss = $mysqli->query("SELECT * FROM tenant WHERE Tenant_Id='$TID'");
+$vals = $results->fetch_assoc();
+$TN =  $val['Tenant_Name'];
+
+?>
 <!doctype html>
 <html lang="en-US" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:addthis="https://www.addthis.com/help/api-spec"  prefix="og: http://ogp.me/ns#" class="no-js">
 <head>
@@ -88,7 +97,7 @@
 		$pages->mid_range = 9;
 		$pages->paginate();
 
-		$result	=	$mysqli->query("SELECT * FROM tenan_message where location ='operator' ORDER BY ID ASC ".$pages->limit."");
+		$result	=	$mysqli->query("SELECT * FROM tenan_message where location ='operator' AND tenant_name='$TN' ORDER BY ID ASC ".$pages->limit."");
 }
 	?>
 	<div class="clearfix"></div>
