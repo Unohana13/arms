@@ -1,8 +1,4 @@
-<?php session_start(); include_once('../config.php'); include('../paginator.class.php'); include('addreservation.php'); $userpaymentID  = $_SESSION['id'];
-$result = $mysqli->query("SELECT * FROM useraccount WHERE id='$userpaymentID'");
-$val = $result->fetch_assoc();
-$TID =  $val['Tenant_Id'];
-?>
+<?php session_start(); include_once('../config.php'); include('../paginator.class.php'); include('addreservation.php'); $userpaymentID  = $_SESSION['id'];?>
 <!doctype html>
 <html lang="en-US" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:addthis="https://www.addthis.com/help/api-spec"  prefix="og: http://ogp.me/ns#" class="no-js">
 <head>
@@ -49,7 +45,7 @@ $TID =  $val['Tenant_Id'];
 
 </br>
 <div class="container" colspan="8" align="center">
-	<Strong><span>Tenant Management <?php echo $TID ?> <p class="fas fa-person-booth"></p> &nbsp;</span></strong>
+	<Strong><span>Operator Messages <?php echo $_SESSION['id'] ?> <p class="fas fa-person-booth"></p> &nbsp;</span></strong>
 
 </div>
 </br>
@@ -62,7 +58,7 @@ $TID =  $val['Tenant_Id'];
 
 						 </div>
 
-						<a href="#addTenant" class="btn btn-primary" data-toggle="modal"><span>Write Message</span></a>
+						<!--<a href="#addTenant" class="btn btn-primary" data-toggle="modal"><span>Write Message</span></a>-->
 
 				</div>
 			</form>
@@ -92,7 +88,7 @@ $TID =  $val['Tenant_Id'];
 		$pages->mid_range = 9;
 		$pages->paginate();
 
-		$result	=	$mysqli->query("SELECT * FROM tenan_message where location !='operator' AND tenant_id = "$TID" ORDER BY ID ASC ".$pages->limit."");
+		$result	=	$mysqli->query("SELECT * FROM tenan_message where location ='operator' ORDER BY date DESC ".$pages->limit."");
 }
 	?>
 	<div class="clearfix"></div>

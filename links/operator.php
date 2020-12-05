@@ -970,6 +970,9 @@ $("#show-sidebar").click(function() {
                 <li>
                   <a href="operatorview/ownermsg.php" target="myIframe">Tenant Messages</a>
                 </li>
+                <li>
+                  <a href="operatorview/msgtenant.php" target="myIframe">Messages to Tenant</a>
+                </li>
               </ul>
             </div>
           </li>

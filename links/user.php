@@ -754,6 +754,14 @@ $("#show-sidebar").click(function() {
               <span style="font-size:13px;">Message the Owner</span>
             </a>
           </li>
+          
+          <li>
+            <a href="userview/operatormsg.php" target="myIframe">
+              <i class="fa fa-book"></i>
+              <span style="font-size:13px;">Operatos Messages</span>
+            </a>
+          </li>
+
 
         </ul>
       </div>

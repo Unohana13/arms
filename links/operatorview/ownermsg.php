@@ -88,7 +88,7 @@
 		$pages->mid_range = 9;
 		$pages->paginate();
 
-		$result	=	$mysqli->query("SELECT * FROM tenan_message ORDER BY date DESC ".$pages->limit."");
+		$result	=	$mysqli->query("SELECT * FROM tenan_message WHERE status !='Archived' ORDER BY date DESC ".$pages->limit."");
 }
 	?>
 	<div class="clearfix"></div>
