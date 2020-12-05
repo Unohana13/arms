@@ -92,7 +92,7 @@ $TID =  $val['Tenant_Id'];
 		$pages->mid_range = 9;
 		$pages->paginate();
 
-		$result	=	$mysqli->query("SELECT * FROM tenan_message where location !='operator' AND tenant_id = '$TID' ORDER BY ID ASC ".$pages->limit."");
+		$result	=	$mysqli->query("SELECT * FROM tenan_message where location !='operator' AND tenant_id = '$TID' ORDER BY ID DESC ".$pages->limit."");
 }
 	?>
 	<div class="clearfix"></div>
@@ -113,7 +113,6 @@ $TID =  $val['Tenant_Id'];
 	<table class="table table-bordered table-striped" id="empTable">
 		<thead>
 			<tr class="header">
-				<th style="text-align:center;">ID</th>
 				<th style="text-align:center;">Date Submitted</th>
 				<th style="text-align:center;">Message</th>
 			</tr>
@@ -132,7 +131,6 @@ $TID =  $val['Tenant_Id'];
 			?>
 			<tr>
 				<?php $n++; ?>
-				<td style="text-align:center;"><?php echo $val['ID']; ?></td>
 				<td style="text-align:center;"><?php echo $val['date']; ?></td>
 				<?php $Hello[$n-2] = $val['Tenant_Id']; ?>
 

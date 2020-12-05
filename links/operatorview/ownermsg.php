@@ -45,7 +45,7 @@
 
 </br>
 <div class="container" colspan="8" align="center">
-	<Strong><span>Tenant Messages <?php echo $_SESSION['id'] ?> <p class="fas fa-person-booth"></p> &nbsp;</span></strong>
+	<Strong><span>Tenant Messages</span></strong>
 
 </div>
 </br>
@@ -79,7 +79,7 @@
 		$pages->mid_range = 9;
 		$pages->paginate();
 
-		$result	=	$mysqli->query("SELECT * FROM tenan_message WHERE  1 ".$condition." AND status !='Archived' 1 ORDER BY date DESC ".$pages->limit."");
+		$result	=	$mysqli->query("SELECT * FROM tenan_message WHERE  1 ".$condition." AND status !='Archived' 1 ORDER BY ID DESC ".$pages->limit."");
 	}else {
   $pages = new Paginator;
 		$pages->default_ipp = 10;
@@ -88,7 +88,7 @@
 		$pages->mid_range = 9;
 		$pages->paginate();
 
-		$result	=	$mysqli->query("SELECT * FROM tenan_message WHERE status !='Archived' ORDER BY date DESC ".$pages->limit."");
+		$result	=	$mysqli->query("SELECT * FROM tenan_message WHERE status !='Archived'ORDER BY ID DESC ".$pages->limit."");
 }
 	?>
 	<div class="clearfix"></div>
