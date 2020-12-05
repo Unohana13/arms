@@ -1,5 +1,5 @@
 <?php session_start(); include_once('../config.php'); include('../paginator.class.php'); include('addreservation.php'); $userpaymentID  = $_SESSION['id'];
-$result = $mysqli->query("SELECT * FROM useraccount WHERE id='.$userpaymentID.'");
+$result = $mysqli->query("SELECT * FROM useraccount WHERE id= $userpaymentID ");
 $val = $result->fetch_assoc()
 $TID =  $val['Tenant_Id'];
 ?>
@@ -92,7 +92,7 @@ $TID =  $val['Tenant_Id'];
 		$pages->mid_range = 9;
 		$pages->paginate();
 
-		$result	=	$mysqli->query("SELECT * FROM tenan_message where location !='operator' ORDER BY ID ASC ".$pages->limit."");
+		$result	=	$mysqli->query("SELECT * FROM tenan_message where location !='operator' AND tenant_id = ".$TID." ORDER BY ID ASC ".$pages->limit."");
 }
 	?>
 	<div class="clearfix"></div>
