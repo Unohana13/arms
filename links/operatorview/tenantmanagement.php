@@ -57,7 +57,7 @@ input[type=number] {
 
 	</br>
 	<div class="container" colspan="8" align="center">
-		<Strong><span>Tenant Management <p class="fas fa-person-booth"></p> &nbsp;</span></strong>
+		<Strong><span>Tenant Messages</strong>
 
 	</div>
 </br>
@@ -70,7 +70,7 @@ input[type=number] {
 
 							 </div>
 
-							<a href="#addTenant" class="btn btn-primary" data-toggle="modal"><span>Add New Tenant</span></a>
+							<a href="#addTenant" class="btn btn-primary" data-toggle="modal"><span>Write Message</span></a>
 
 					</div>
 				</form>
@@ -86,12 +86,12 @@ input[type=number] {
 			//Main query
 			$pages = new Paginator;
 			$pages->default_ipp = 10;
-			$sql_forms = $mysqli->query("SELECT * FROM tenant WHERE status !='Archived' 1 ".$condition."");
+			$sql_forms = $mysqli->query("SELECT * FROM tenant WHERE  1 ".$condition." AND status !='Archived'");
 			$pages->items_total = $sql_forms->num_rows;
 			$pages->mid_range = 9;
 			$pages->paginate();
 
-			$result	=	$mysqli->query("SELECT * FROM tenant WHERE status !='Archived' 1 ".$condition." ORDER BY Tenant_Name ASC ".$pages->limit."");
+			$result	=	$mysqli->query("SELECT * FROM tenant WHERE  1 ".$condition." AND status !='Archived'  ORDER BY Tenant_Name ASC ".$pages->limit."");
 		}else {
       $pages = new Paginator;
 			$pages->default_ipp = 10;
@@ -376,75 +376,60 @@ input[type=number] {
 																		<option value="Pasig City">Pasig City</option>
 																	</select>
 																</div>
-															<div class="form-group">
-																	<label>Room Number</label>
-																	<input id="roomnumber" onkeyup="validate();" type="number" value="<?php echo $TenantRES['roomnumber'];?>" name = "editroomnumber" class="form-control" required>
-															</div>
-															<div class="form-group">
-																	<label>Number of Occupants</label>
-																	<input id="editoccupants" onkeyup="validate();" min="1" type="number" value="<?php echo $TenantRES['occupants'];?>" name = "editoccupants" class="form-control" required>
-															</div>
-															<div>
-															<div class="form-group">
-															</div>
-															<div class="form-group">
-																<label>Full Name</label>
-																<input id="inputField" onkeyup="validate();" type="text" name = "editfullname" class="form-control" value="<?php echo mb_strtoupper($TenantRES['Tenant_Name']); ?>" required>
-															</div>
+																<div class="form-group">
+																<label>Room Number</label>
+																<?php $initial = "0"; ?>
+																<select id="select3" name="editroomnumber" class="form-control">
+																	<option value="<?php echo $TenantRES['roomnumber']; ?>"><?php echo $TenantRES['location']; ?> Room <?php echo $TenantRES['roomnumber']; ?></option>
+																	<?php
+																		$Continentqry = $mysqli->query('SELECT DISTINCT roomnumber, location FROM room Where number=0 ORDER BY roomnumber ASC ');
+																		while($crow = $Continentqry->fetch_assoc()) {
+																			$n = 0;
+																			echo "<option value = '{$crow['roomnumber']}'";
+																			if(isset($_REQUEST['editroomnumber']) and $_REQUEST['tb1']==$crow['roomnumber'])
+																			echo ' selected="selected"';
+																			echo ">{$crow['location']} Room {$crow['roomnumber']}</option>\n";
+																			$n++;
+																		}
+
+																	?>
+																</select>
 
 															<div class="form-group">
-																<label>Birthdate</label>
-																<input class="form-control" id ="txtDate" type="date" name="editbirthday" max="2015-01-01" value="<?php echo $TenantRES['Birthdate']; ?>">
-															</div>
+		
+																<label>Full Name: </label>
+																<p><?php echo $TenantRES['Tenant_Name'] ?></p>
+																</div>
+
 															<div class="form-group">
-																<label>Home Address</label>
-																<textarea name = "edithomeaddress" class="form-control"><?php echo $TenantRES['Home_Address']; ?></textarea>
-															</div>
+																<label>Birthdate: </label>
+																<p><?php echo $TenantRES['Birthdate'] ?></p>
+																</div>
+																<div class="form-group">
+																<label>Age: </label>
+																<p><?php echo $TenantRES['Tenant_Age'] ?></p>
+																</div>
 															<div class="form-group">
-																<label>Phone Number <span class="badge badge-info">Format (xxx-xxx-xxxx)</span></label>
-																	<input type="tel" name="editphonenumber" pattern="^\d{3}-\d{3}-\d{4}$" class="form-control" value="<?php echo $TenantRES['Tenant_Contact']; ?>"required >
-															</div>
+																<label>Home Address: </label>
+																<p><?php echo $TenantRES['Home_Address'] ?></p>
+																</div>
 															<div class="form-group">
-																<label>Guardian Full Name <span class="badge badge-info">Format("Letters Only")</span></label>
-																<input name="editguardianFullname" class="form-control" pattern="[A-Za-z ]+" value="<?php echo $TenantRES['Guardian_Name']; ?>">
-															</div>
+																<label>Phone Number: </label>
+																<p><?php echo $TenantRES['Tenant_Contact'] ?></p>
+																</div>
 															<div class="form-group">
-																<label>Guardian Phone Number <span class="badge badge-info">Format (xxx-xxx-xxxx)</span></label>
-																	<input type="tel" name="editguardianphonenumber" pattern="^\d{3}-\d{3}-\d{4}$" class="form-control" value = "<?php echo $TenantRES['Guardian_Contact']; ?>"required >
-															</div>
+																<label>Guardian Full Name: </label>
+																<p><?php echo $TenantRES['Guardian_Name'] ?></p>
+																</div>
 															<div class="form-group">
-																<label>Address of present apartment</label>
-																<textarea name = "editaddressofpresent" class="form-control"><?php echo $TenantRES['Address_Of_Present_Apartment']; ?></textarea>
+																<label>Guardian Phone Number :</label>
+																<p><?php echo $TenantRES['Guardian_Contact'] ?></p>
+																</div>
+			
+
 															</div>
-															<div class="form-group">
-																<label>Reason For Leaving</label>
-																<textarea name = "editreasonforleaving" class="form-control"><?php echo $TenantRES['Reason_For_Leaving']; ?></textarea>
-															</div>
-															<div class="form-group">
-																<label>Years of stay in present apartment</label>
-																<input name = "edityearsofstayinpresent" type = "number" min = "0" max = "99" class="form-control" value="<?php echo $TenantRES['Years_Of_Stay_In_Present_Apartment']; ?>">
-															</div>
-															<div class="form-group">
-																<label>Name of school or work</label>
-																<textarea name = "editnameofschoolwork" class="form-control" ><?php echo $TenantRES['Name_Of_Schoolwork']; ?></textarea>
-															</div>
-															<div class="form-group">
-																<label>Address of school or work</label>
-																<textarea name = "editaddressofschoolwork" class="form-control"><?php echo $TenantRES['Address_Of_Present_Apartment']; ?></textarea>
-															</div>
-															<div class="form-group">
-																<label>Position in Company <span class="badge badge-info">Format("Letters Only")</span></label>
-																<input name="editpositionincompany" class="form-control" pattern="[A-Za-z ]+" value="<?php echo $TenantRES['Position_In_Company']; ?>">
-															</div>
-															<div class="form-group">
-																<label>Name Of immediate Supervisor <span class="badge badge-info">Format("Letters Only")</span></label>
-																<input name="editNameimmediatesupervisor" class="form-control" pattern="[A-Za-z ]+" value="<?php echo $TenantRES['Name_Of_Immediate_Supervisor']; ?>">
-															</div>
-															<div class="form-group">
-																<label>Number of years in present position</label>
-																<input name = "edityearsinpresentposition" type = "number" min = "0" max = "99" class="form-control" value="<?php echo $TenantRES['Number_Of_years_In_present_Position']; ?>">
-															</div>
-														</div>
+															<div>
+															
 														</div>
 														<div class="modal-footer">
 															<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
@@ -546,7 +531,21 @@ initial div element for adding tenant
 						<div id="myDIV" style="display:none">
 							<div class="form-group">
 									<label>Room Number</label>
-									<input id="roomnumber" onkeyup="validate();" type="number" name = "roomnumber" class="form-control" required>
+									<select id="select123" name="roomnumber" class="form-control">
+																	<option> Please Select a Room number with a right Location</option>
+																	<?php
+																		$Continentqry = $mysqli->query('SELECT DISTINCT roomnumber, location FROM room Where number=0 ORDER BY roomnumber ASC ');
+																		while($crow = $Continentqry->fetch_assoc()) {
+																			$n = 0;
+																			echo "<option value = '{$crow['roomnumber']}'";
+																			if(isset($_REQUEST['roomnumber']) and $_REQUEST['tb1']==$crow['roomnumber'])
+																			echo ' selected="selected"';
+																			echo ">{$crow['location']} Room {$crow['roomnumber']}</option>\n";
+																			$n++;
+																		}
+
+																	?>
+								</select>
 							</div>
 							<div class="form-group">
 									<label>Number of Occupants</label>

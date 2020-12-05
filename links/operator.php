@@ -322,7 +322,6 @@ $obj_pdf->Output('transientlistreport.pdf', 'I');
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
@@ -968,6 +967,9 @@ $("#show-sidebar").click(function() {
                 <li>
                   <a href="operatorview/archives.php" target="myIframe">Archives</a>
                 </li>
+                <li>
+                  <a href="operatorview/ownermsg.php" target="myIframe">Tenant Messages</a>
+                </li>
               </ul>
             </div>
           </li>
@@ -981,6 +983,9 @@ $("#show-sidebar").click(function() {
               <ul>
                 <li>
                   <a href="operatorview/pendingnot.php" target="myIframe">Tenant</a>
+                </li>
+                <li>
+                  <a href="operatorview/userpayment.php" target="myIframe">User Transaction</a>
                 </li>
 
 
@@ -1079,6 +1084,7 @@ $("#show-sidebar").click(function() {
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" enctype="multipart/form-data">
           <div class="modal-header">
             <h4 class="modal-title">Please Select Month and Year to print</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
           </div>
           <div class="modal-body">
             <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -1115,7 +1121,7 @@ $("#show-sidebar").click(function() {
 
 
 
-          <a class="btn btn-link" href="Admin.php">Cancel</a>
+          <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
             <input type="submit" onsubmit="setTimeout(function () { window.location.reload(); }, 10)" class="btn btn-danger" data-dismiss="static" name ="PrintPayment" value="Print">
           </div>
         </form>
@@ -1146,6 +1152,7 @@ $("#show-sidebar").click(function() {
         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" enctype="multipart/form-data">
           <div class="modal-header">
             <h4 class="modal-title">Are you sure to print report for Tenant list</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
           </div>
           <div class="modal-body">
             <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -1158,7 +1165,7 @@ $("#show-sidebar").click(function() {
             </div>
           </div>
           <div class="modal-footer">
-            <a class="btn btn-link" href="Admin.php">Cancel</a>
+            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
             <input type="submit" onsubmit="setTimeout(function () { window.location.reload(); }, 10)" class="btn btn-danger" data-dismiss="static" name ="PrintTenant" value="Print">
           </div>
         </form>
