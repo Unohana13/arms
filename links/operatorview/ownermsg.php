@@ -88,7 +88,7 @@
 		$pages->mid_range = 9;
 		$pages->paginate();
 
-		$result	=	$mysqli->query("SELECT * FROM tenan_message ORDER BY ID DESC ".$pages->limit."");
+		$result	=	$mysqli->query("SELECT * FROM tenan_message WHERE location !='operator' ORDER BY ID DESC ".$pages->limit."");
 }
 	?>
 	<div class="clearfix"></div>
