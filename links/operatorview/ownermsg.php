@@ -88,7 +88,7 @@
 		$pages->mid_range = 9;
 		$pages->paginate();
 
-		$result	=	$mysqli->query("SELECT * FROM tenan_message WHERE status !='Archived'ORDER BY ID DESC ".$pages->limit."");
+		$result	=	$mysqli->query("SELECT * FROM tenan_message ORDER BY ID DESC ".$pages->limit."");
 }
 	?>
 	<div class="clearfix"></div>
@@ -127,7 +127,7 @@
 				while($val = $result->fetch_assoc()){
 					$idEdit = $val['ID'];
 					$tenantName = $val['tenantname'];
-					$tenantid = $val['Tenant_ID'];
+					$tenantid = $val['tenant_id'];
 			?>
 			<tr>
 				<?php $n++; ?>
@@ -136,7 +136,7 @@
 				<td style="text-align:center;"><?php echo $val['location']; ?></td>
 				<td style="text-align:center;"><?php echo $val['roomnumber']; ?></td>
 				<td style="text-align:center;"><?php echo $val['date']; ?></td>
-				<?php $Hello[$n-2] = $val['Tenant_Id']; ?>
+				<?php $Hello[$n-2] = $val['tenant_id']; ?>
 
 		<td style="text-align:center;">
 			 <a class ="msg" href="#msg<?php echo $idEdit;?>" data-toggle="modal">
