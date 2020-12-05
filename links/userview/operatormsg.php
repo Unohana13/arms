@@ -2,9 +2,11 @@
 $result = $mysqli->query("SELECT * FROM useraccount WHERE id='$userpaymentID'");
 $val = $result->fetch_assoc();
 $TID =  $val['Tenant_Id'];
+$stmt->close();
 $resultss = $mysqli->query("SELECT * FROM tenant WHERE Tenant_Id='$TID'");
 $vals = $results->fetch_assoc();
 $TN =  $vals['Tenant_Name'];
+$stmt->close();
 ?>
 <!doctype html>
 <html lang="en-US" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:addthis="https://www.addthis.com/help/api-spec"  prefix="og: http://ogp.me/ns#" class="no-js">
