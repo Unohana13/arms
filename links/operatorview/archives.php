@@ -57,7 +57,7 @@ input[type=number] {
 
 	</br>
 	<div class="container" colspan="8" align="center">
-		<Strong><span>Tenant Management <p class="fas fa-person-booth"></p> &nbsp;</span></strong>
+		<Strong><span>Tenant Archives</span></strong>
 
 	</div>
 </br>
@@ -233,7 +233,7 @@ input[type=number] {
 
 							<div id="paymentT<?php echo $idEdit;?>" class="modal fade">
 
-			.0					<div class="modal-dialog">
+								<div class="modal-dialog">
 									<div class="modal-content">
 										<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 											<div class="modal-header">

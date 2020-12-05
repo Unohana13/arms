@@ -49,7 +49,7 @@ $TID =  $val['Tenant_Id'];
 
 </br>
 <div class="container" colspan="8" align="center">
-	<Strong><span>Tenant Management <?php echo $TID ?> <p class="fas fa-person-booth"></p> &nbsp;</span></strong>
+	<Strong><span>Your Messages</span></strong>
 
 </div>
 </br>
@@ -92,7 +92,7 @@ $TID =  $val['Tenant_Id'];
 		$pages->mid_range = 9;
 		$pages->paginate();
 
-		$result	=	$mysqli->query("SELECT * FROM tenan_message where location !='operator' AND tenant_id = "$TID" ORDER BY ID ASC ".$pages->limit."");
+		$result	=	$mysqli->query("SELECT * FROM tenan_message where location !='operator' AND tenant_id = '$TID' ORDER BY ID ASC ".$pages->limit."");
 }
 	?>
 	<div class="clearfix"></div>
