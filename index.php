@@ -102,24 +102,33 @@ if(isset($_POST['login'])){
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="icon" href="icon/main.png">
   <style>
   @font-face {
+
+    src: url(text/Roboto-Medium.ttf);
+    font-family: Roboto; 
+  }
+  @font-face {
+    src: url(text/Roboto-Bold.ttf);
+    font-family: roboto;
+
     src: url(text/Anton-Regular.ttf);
     font-family: text2; 
   }
   @font-face {
     src: url(text/Roboto-Light.ttf);
     font-family: robo;
+
   }
   .map-container-7{
   overflow:hidden;
-  padding-bottom:56.25%;
+  padding-bottom:70%;
   position:relative;
   height:0;
   }
@@ -132,23 +141,24 @@ if(isset($_POST['login'])){
   }
 
   body {
-      font: 400 15px Lato, sans-serif;
+      font: 400 Roboto;
+      font-size: 16px;
       line-height: 1.8;
-      color: #818181;
-      background-color: whitesmoke;
+      color: #1c1c22;
+      background-color: white;
   }
   .wrapper{ width: 350px; padding: 20px; }
   h2 {
       font-size: 24px;
       text-transform: uppercase;
-      color: #303030;
+      color: #1c1c22;
       font-weight: 600;
       margin-bottom: 30px;
   }
   h4 {
-      font-size: 19px;
+      font-size: 20px;
       line-height: 1.375em;
-      color: #303030;
+      color: #1c1c22;
       font-weight: 400;
       margin-bottom: 30px;
   }
@@ -174,8 +184,8 @@ if(isset($_POST['login'])){
   .container-fluid {
       padding: 60px 50px;
   }
-  .bg-grey {
-      background-color: #f6f6f6;
+  .bg-white {
+      background-color: #ffff;
   }
   .logo-small {
       margin:auto;
@@ -207,7 +217,7 @@ if(isset($_POST['login'])){
       background-color: #006ad7;
   }
   .item h4 {
-      font-size: 19px;
+      font-size: 20px;
       line-height: 1.375em;
       font-weight: 400;
       font-style: italic;
@@ -226,11 +236,11 @@ if(isset($_POST['login'])){
   }
   .panel-footer .btn:hover {
       border: 1px solid #006ad7;
-      background-color: #fff !important;
+      background-color: #ffff !important;
       color: #006ad7;
   }
   .panel-heading {
-      color: #fff !important;
+      color: #ffff !important;
       background-color: #006ad7 !important;
       padding: 25px;
       border-bottom: 1px solid transparent;
@@ -246,24 +256,25 @@ if(isset($_POST['login'])){
       font-size: 32px;
   }
   .panel-footer h4 {
-      color: #aaa;
+      color: #aaaa;
       font-size: 14px;
   }
   .panel-footer .btn {
       margin: 15px 0;
       background-color: #006ad7;
-      color: #fff;
+      color: #ffff;
   }
   .navbar {
       margin-bottom: 0;
-      background-color: #b2beb5;
+      background-color: white;
       z-index: 9999;
       border: 0;
-      font-size: 12px !important;
+      font-size: 16px !important;
       line-height: 1.42857143 !important;
-      letter-spacing: 4px;
+      letter-spacing: 1px;
       border-radius: 0;
-      font-family: Montserrat, sans-serif;
+      font-family: roboto;
+      font-weight: bold;
   }
   .navbar li a, .navbar .navbar-brand {
       color: black !important;
@@ -290,51 +301,59 @@ if(isset($_POST['login'])){
       visibility: visible;
   }
   .homepagetext1 {
-    font-family:text2;
+    font-family:roboto;
     font-weight: bold;
-    font-size: 100px;
-    background-color: darkblue;
+    font-size: 90px;
+    background-color: #1F4C87;
     border-style: solid;
     border-color: white;
     text-align: center;
+
+    color: white;
+
     color: whitesmoke;
+
     width: 200px;
 
 }
 .homepagetext2 {
-    font-family:text2;
+    font-family:roboto;
     font-weight: bold;
-    font-size: 100px;
-    background-color: yellowgreen;
+    font-size: 90px;
+    background-color: #DBB624;
     text-align: center;
     border-style: solid;
     border-color: white;
+
+    color: white;
+
     color: whitesmoke;
+
     width: 200px;
 
 }
 .homepagetext3 {
-   font-family:text2;
+   font-family:roboto;
     font-weight: bold;
-    font-size: 100px;
-    background-color: yellowgreen;
+    font-size: 90px;
+    background-color: #DBB624;
     text-align: center;
     border-style: solid;
     border-color: white;
-    color: whitesmoke;
-    width: 300px;
+    color: white;
+    width: 250px;
 
 }
 .homepagetext4 {
-    font-family:text2;
+    font-family:roboto;
     font-weight: bold;
-    font-size: 100px;
-    background-color: darkblue;
+    font-size: 90px;
+    background-color: #1F4C87;
     text-align: center;
     border-style: solid;
     border-color: white;
-    color: whitesmoke;
-    width: 300px;
+    color: white;
+    width: 250px;
 }
   @keyframes slide {
     0% {
@@ -372,7 +391,7 @@ if(isset($_POST['login'])){
 
     .jumbotrontext {
       background-image: none;
-      background-color: blue;
+      background-color: #1F4C87;
      }
      .jumbotrontext1{
      margin:auto;
@@ -408,7 +427,7 @@ if(isset($_POST['login'])){
     }
     .jumbotron {
       background-image: none;
-      background-color: blue;
+      background-color: #1F4C87;
      }
      .homepagetext1 {
       font-size: 50px;
@@ -436,7 +455,7 @@ if(isset($_POST['login'])){
   }
   .map-container-7{
 overflow:hidden;
-padding-bottom:56.25%;
+padding-bottom:70%;
 position:relative;
 height:0;
 }
@@ -448,7 +467,7 @@ width:100%;
 position:absolute;
 }
 #loga{
-  color: #FFFFFF;
+  color: #FFFF;
 }
 #loga, .icon-size{
   top: 7px;
@@ -477,7 +496,7 @@ html{
   Scroll-behavior:smooth;
 }
 .amme{
-  font-size:15px;
+  font-size:16px;
 }
   </style>
 </head>
@@ -495,9 +514,16 @@ html{
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-left">
       <li><a href="#">
+
+          <span class="glyphicon glyphicon-home"></span> 
+          <span class="font-weight-bold"></span> ARMS
+        </a></li>
+        <!--<li><a href="#ARMS">ABOUT</a></li>-->
+
           <span class="glyphicon glyphicon-home"></span> ARMS
         </a></li>
         <li><a href="#ARMS">ABOUT</a></li>
+
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#locations">
           Locations <span class="caret"></span></a>
@@ -508,7 +534,11 @@ html{
           </ul>
          </li>
         <li><a href="#contact">Contact Us</a></li>
+
+        <li><a href="#reservation" data-toggle="modal">Tenant Application</a></li>
+
         <li><a href="#reservation" data-toggle="modal">Reservation</a></li>
+
         <li><a data-toggle="modal" data-target="#ModalLogin">LOGIN</a></li>
 
 
@@ -579,7 +609,7 @@ html{
           <h4 class="modal-title">Success</h4>
         </div>
         <div class="modal-body">
-          <p>Feedback sent successfully!</p>
+          <p>Feedback Sent Successfully!</p>
         </div>
       </div>
     </div>
@@ -589,7 +619,7 @@ html{
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">unsuccessful</h4>
+          <h4 class="modal-title">Unsuccessful</h4>
         </div>
         <div class="modal-body">
           <p>Feedback sent error!</p>
@@ -607,37 +637,28 @@ html{
                 Find
             </p>
             <p class ="homepagetext2">
-                Your
+                your
             </p>
         </div>
         <div class="jumbotrontext2">
             <p class = "homepagetext3">
-                Rental
+                rental
             </p>
             <p class ="homepagetext4">
-                Here
+                here.
             </p>
         </div>              
   </div>
 </div>
-<!--<div id="locations" class="menu">
+
 <br></br>
-  <div>
-    <h2>Locations of buildings</h2>
-  </div>
-  <div>
-    <a href="#mylocation1">location 1</a>
-  </div>
-  <div>
-    <a href="#mylocation2">location 2</a>
-  </div>
-  <div>
-    <a href="#mylocation3">location 3</a>
-  </div>
-</div>-->
 <br></br>
+<br></br>
+
 <!-- location1 -->
-  <div id="mylocation1" class="carousel slide" data-ride="carousel" style="top:-29px;">
+  <div id="mylocation1" class="carousel slide" data-ride="carousel" style="top:-20px;">
+    <br>
+    <br>
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#mylocation1" data-slide-to="0" class="active"></li>
@@ -650,6 +671,18 @@ html{
     <div class="carousel-inner">
 
       <div class="item active">
+
+        <img src="Carouselpic\location1\dining.png" alt="first pic" style="width:100%; height:500px; margin:auto;">
+      </div>
+      <div class="item">
+        <img src="Carouselpic\location1\bedroom.png" alt="Second pic" style="width:100%; height:500px; margin:auto;">
+      </div>
+      <div class="item">
+        <img src="Carouselpic\location1\bath.png" alt="third pic"  style="width:100%; height:500px; margin:auto;">
+      </div>
+      <div class="item">
+        <img src="Carouselpic\location1\floorplan.png" alt="Fourth pic" style="width:100%; height:500px; margin:auto;">
+
         <img src="Carouselpic\location1.JPG" alt="first pic" style="width:auto; height:500px; margin:auto;">
       </div>
       <div class="item">
@@ -660,9 +693,10 @@ html{
       </div>
       <div class="item">
         <img src="Carouselpic\location1\building1room3.JPG" alt="Fourth pic" style="width:auto; height:500px; margin:auto;">
+
       </div>
       <div class="item">
-        <img src="Carouselpic\location1\building1room4.jpeg" alt="Fifth pic" style="width:auto; height:500px; margin:auto;">
+        <img src="Carouselpic\location1\aptDetails.png" alt="Fifth pic" style="width:100%; height:500px; margin:auto;">
       </div>
     </div>
 
@@ -676,20 +710,13 @@ html{
       <span class="sr-only">Next</span>
     </a>
   </div>
-  <!-- location1 details -->
-<div class="building_text">
-  <div>
-      <h1> Location 1  Building Details</h1>
-  </div>
-  <div>
-     <p>Address: 5.P.Cruz St Barangka ibaba Mandaluyong city</p>
-     <p>Income Requirment: Must have 2.5x the rent in the total household income</p>
-     <p>Pets: Cats and Dogs are allowed</p>
-     <p>Fee: $300 per aparment</p>
-     <p>Rent: $25 for 1 per/month, $40 for 2pets/months</p>
-  </div>
-</div>
 <br></br>
+
+    <!-- location1 details -->
+    <div class="building_text">
+  <div>
+      <h2> Mandaluyong Apartment</h2>
+
 
 <!-- Container (Services Section) -->
 <div id="services" class="container-fluid text-center">
@@ -721,13 +748,13 @@ html{
       <p class="amme">The building has a large space for tenants with vehicle.</p>
       </div>
     </div>
+
   </div>
 </div>
-<br>
 
 <!-- location2 -->
 
-<div id="mylocation2" class="carousel slide" data-ride="carousel" style="top:-29px;">
+<div id="mylocation2" class="carousel slide" data-ride="carousel" style="top:15px;">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#mylocation2" data-slide-to="0" class="active"></li>
@@ -740,6 +767,18 @@ html{
     <div class="carousel-inner">
 
       <div class="item active">
+
+        <img src="Carouselpic\bedroom2.png" alt="first pic" style="width:100%; height:500px; margin:auto;">
+      </div>
+      <div class="item">
+        <img src="Carouselpic\location1\dining.png" alt="Second pic" style="width:100%; height:500px; margin:auto;">
+      </div>
+      <div class="item">
+        <img src="Carouselpic\location1\bath.png" alt="third pic"  style="width:100%; height:500px; margin:auto;">
+      </div>
+      <div class="item">
+        <img src="Carouselpic\location1\floorplan.png" alt="Fourth pic" style="width:100%; height:500px; margin:auto;">
+
         <img src="Carouselpic\location2.JPG" alt="first pic" style="width:auto; height:500px; margin:auto;">
       </div>
       <div class="item">
@@ -750,9 +789,10 @@ html{
       </div>
       <div class="item">
         <img src="Carouselpic\location1\building1room3.JPG" alt="Fourth pic" style="width:auto; height:500px; margin:auto;">
+
       </div>
       <div class="item">
-        <img src="Carouselpic\location1\building1room4.jpeg" alt="Fifth pic" style="width:auto; height:500px; margin:auto;">
+        <img src="Carouselpic\location1\aptDetails.png" alt="Fifth pic" style="width:100%; height:500px; margin:auto;">
       </div>
     </div>
 
@@ -766,19 +806,43 @@ html{
       <span class="sr-only">Next</span>
     </a>
   </div>
-  <!-- location1 details -->
+<br></br>
+<!-- location2 details -->
 <div class="building_text">
   <div>
-      <h1> Location 2  Building Details</h1>
-  </div>
-  <div>
-     <p>Address: Makati city</p>
-     <p>Income Requirment: Must have 1.5x the rent in the total household income</p>
-     <p>Pets: Dogs are allowed</p>
-     <p>Fee: $250 per aparment</p>
-     <p>Rent: $500 for 1 per/month, $40 for 2pets/months</p>
+      <h2> Makati Apartment</h2>
   </div>
 </div>
+  
+<!-- location3 -->
+<div id="mylocation3" class="carousel slide" data-ride="carousel" style="top:15px;">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#mylocation3" data-slide-to="0" class="active"></li>
+      <li data-target="#mylocation3" data-slide-to="1"></li>
+      <li data-target="#mylocation3" data-slide-to="2"></li>
+      <li data-target="#mylocation3" data-slide-to="3"></li>
+      <li data-target="#mylocation3" data-slide-to="4"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+
+
+      <div class="item active">
+        <img src="Carouselpic\bedroom3.png" alt="first pic" style="width:100%; height:500px; margin:auto;">
+      </div>
+      <div class="item">
+        <img src="Carouselpic\location1\dining.png" alt="Second pic" style="width:100%; height:500px; margin:auto;">
+      </div>
+      <div class="item">
+        <img src="Carouselpic\location1\bath.png" alt="third pic"  style="width:100%; height:500px; margin:auto;">
+      </div>
+      <div class="item">
+        <img src="Carouselpic\location1\floorplan.png" alt="Fourth pic" style="width:100%; height:500px; margin:auto;">
+      </div>
+      <div class="item">
+        <img src="Carouselpic\location1\aptDetails.png" alt="Fifth pic" style="width:100%; height:500px; margin:auto;">
+      </div>
 
 <!-- Container (Services Section) -->
 <div id="services" class="container-fluid text-center">
@@ -800,10 +864,27 @@ html{
       <span class="glyphicon glyphicon-tint logo-small"></span>
       <h4>FREE WATER</h4>
       <p>In one drop of water are found all the secrets of all the oceans; in one aspect of You are found all the aspects of existence. That's why it's free </p>
+
     </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#mylocation3" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#mylocation3" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div> 
+<br></br>
+<!-- location3 details -->
+<div class="building_text">
+  <div>
+      <h2> Pasig Apartment</h2>
   </div>
-  <br><br>
-</div>
+</div> 
+
 <!-- Reservation -->
 <!--<a href="#reservation" class="btn btn-primary" style="background-color:transparent;border-left:none;border-right:none;border-top:none; border-bottom:none;" data-toggle="modal"><span class="fas fa-plus-circle" style="color:#2196F3"></span><span style="color:#2196F3;"> Create one</span></a>-->
 <div id="reservation" class="modal fade">
@@ -812,17 +893,17 @@ html{
           <form method="post" action="addreservation.php" enctype="multipart/form-data">
             <div class="modal-header">
             <br></br>
-              <h4 class="modal-title">Reservation Form:</h4>
+              <h4 class="modal-title">Tenant Application Form:</h4>
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             </div>
             <div class="modal-body">
 
               <div class="form-group">
-                <label>Guest Full Name <span class="badge badge-info">Format("Letters Only")</span></label>
+                <label>Applicant's Full Name <span class="badge badge-info">Format("Letters Only")</span></label>
                 <input name="name" class="form-control" pattern="[A-Za-z ]+" value="<?php echo $TenantRES['Guardian_Name']; ?>">
               </div>
               <div class="form-group">
-                <label>Guest Phone Number <span class="badge badge-info">Format (xxx-xxx-xxxx)</span></label>
+                <label>Applicant's Phone Number <span class="badge badge-info">Format (xxx-xxx-xxxx)</span></label>
                   <input type="tel" name="contact" pattern="^\d{3}-\d{3}-\d{4}$" class="form-control" value="<?php echo $TenantRES['Tenant_Contact']; ?>"required >
               </div>
               <div class="form-group">
@@ -837,7 +918,7 @@ html{
               <label for="appt">Choose a time for your meeting:</label>
                 <input type="time" id="time" name="time"
                  min="09:00" max="18:00" required>
-                <small>Office hours are 9am to 6pm</small>
+                <small>Office Hours: 9:00 AM to 6:00 PM</small>
               </div>
               <div class="form-groupd">
               <p><input type="checkbox" required name="terms"> I accept the <a href="#terms" data-toggle="modal"><u>Terms and Conditions</u></a></p></div>
@@ -927,9 +1008,6 @@ html{
   </div>
 <!-- Container (Portfolio Section) -->
 
-
-<section class="section">
-  <h2 class="text-center">Contact us</h2>
   <!--<div class="card">
     <div class="card-body">
       <div id="map-container-google-12" class="z-depth-1-half map-container-7" style="height: 200px">
@@ -939,14 +1017,16 @@ html{
     </div>
   </div>-->
 
-</br>
+<br></br>
 <div id="contact" class="container-fluid">
+<section class="section">
+  <h2 class="text-center">Contact us</h2>
   <div class="row">
     <div class="col-sm-5">
       <p>Contact us and we'll get back to you within 24 hours.</p>
-      <p><span class="glyphicon glyphicon-map-marker"></span> Location of HQ </p>
-      <p><span class="glyphicon glyphicon-phone"></span> +639484143467 / +639480704776</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> Apartment_System@gmail.com</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Location of Main Office </p>
+      <p><span class="glyphicon glyphicon-phone"></span> +639********* / +639*********</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> ApartmentManagementSofEng@gmail.com</p>
     </div>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" id="form" method="post" name="form">
     <div class="col-sm-7 slideanim">
@@ -990,10 +1070,10 @@ $mail->SMTPAuth   = true;
 $mail->SMTPSecure = "tls";
 $mail->Port       = 587;
 $mail->Host       = "smtp.gmail.com";
-$mail->Username   = "ramonadormitory@gmail.com";
-$mail->Password   = "Ramona123456";
+$mail->Username   = "ApartmentManagementSofEng@gmail.com";
+$mail->Password   = "rtu1969!";
 $mail->IsHTML(true);
-$mail->AddAddress("ramonadormitory@gmail.com", "Ramona");
+$mail->AddAddress("ApartmentManagementSofEng@gmail.com", "JDoe");
 $mail->SetFrom($email, $name);
 $mail->AddReplyTo($email, $name);
 $mail->Subject = "This is a Feedback from the Homepage";
