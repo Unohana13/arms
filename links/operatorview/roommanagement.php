@@ -141,10 +141,10 @@ input[type=number] {
 				?>
 				<tr>
 					<?php $n++; ?>
-					<td><?php echo $val['location']; ?></td>
-					<td><?php echo $val['roomnumber']; ?></td>
-          <td><?php echo $val['number']; ?></td>
-          <td style="text-align:center;">
+					<td style="text-align:center;"><?php echo $val['location']; ?></td>
+					<td style="text-align:center;"><?php echo $val['roomnumber']; ?></td>
+					<td style="text-align:center;"><?php echo $val['number']; ?></td>
+          			<td style="text-align:center;">
 						<form method="post">
 
 								<a href="#deleteRoom<?php echo $idEditForRoom;?>" name = "s1s" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit" onclick="showTableData(<?php echo $n ?>)">&#xE22B;</i></a>
