@@ -22,7 +22,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     {
       $sql2 = "SELECT Tenant_Id FROM tenant WHERE Tenant_Name=?";
           if($stmt = $mysqli->prepare($sql2)){
-            $stmt->bind_param("i", $romnumber1);
+            $stmt->bind_param("s", $romnumber1);
               $romnumber1 = $_POST['tenantname'];
               $stmt->execute();
       

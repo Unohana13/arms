@@ -72,7 +72,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   if(isset($_POST['editTen']))
   {
 
-    if($_POST['editOldroomnumber'] != $_POST['editroomnumber'] && $_POST['editOldlocation'] != $_POST['editlocation']){
+    if($_POST['editOldRoomNUmber'] != $_POST['editroomnumber'] && $_POST['editOldlocation'] != $_POST['editlocation']){
 
     
     $sql = "SELECT roomnumber FROM room WHERE roomnumber = ? AND location =?";
@@ -131,30 +131,30 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty($roomnumber_err) && $occupants_errcheck == 0){  
     $sqleditmp = "UPDATE tenant SET roomnumber =?, location=? where Tenant_Id =?";
     if($stmt = $mysqli->prepare($sqleditmp)){
-      $stmt->bind_param("is", $editroomnumber, $editlocation);
+      $stmt->bind_param("isi", $editroomnumber, $editlocation, $ID);
       $editroomnumber = $_POST['editroomnumber'];
       $editlocation = $_POST['editlocation'];
+      $ID = $_POST['edittetenantID'];
         $stmt->execute();
       }
         $stmt->close();
 
 
-        //$editsqld2 = "UPDATE room SET number=?  where roomnumber=? AND location=?";
-        //if($stmt = $mysqli->prepare($editsqld2)){
-        //  $stmt->bind_param("iis",$editparam_newOcc1, $roomnumberedit2, $locationedit2);
-        // $editparam_newOcc1 = $_POST['editoccupants'];
-        //  $roomnumberedit2 = $_POST['editroomnumber'];
-        //  $locationedit2 = $_POST['editlocation'];
-        //    $stmt->execute();
-        //    $stmt->close();
-        //  }
-        //  header("location: tenantmanagement.php");
+        $editsqld2 = "UPDATE room SET number=?  where roomnumber=? AND location=?";
+        if($stmt = $mysqli->prepare($editsqld2)){
+          $stmt->bind_param("iis",$editparam_newOcc1, $roomnumberedit2, $locationedit2);
+         $editparam_newOcc1 = $_POST['editoldoccupants'];
+          $roomnumberedit2 = $_POST['editroomnumber'];
+          $locationedit2 = $_POST['editlocation'];
+            $stmt->execute();
+            $stmt->close();
+          }
       
         $occupantupdate = "UPDATE room SET number=?  where roomnumber =? AND location=?";  
         if($stmt = $mysqli->prepare($occupantupdate)){
           $stmt->bind_param("iis",$occupants, $roomnumber, $location);
           $occupants = 0;
-          $roomnumber = $_POST['editOldroomnumber'];
+          $roomnumber = $_POST['editOldRoomNUmber'];
           $location = $_POST['editOldlocation'];
             $stmt->execute();
             $stmt->close();
@@ -344,7 +344,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
       }
       if(isset($_POST['edittenantstatus']))
   {
-    $occupantupdate2 = "UPDATE room SET number=? where roomnumber=? AND location =?";  
+    if($_POST['editstatus1'] == 'Archived'){
+    $occupantupdate2 = "UPDATE room SET 
+    number=? where roomnumber=? AND location =?";  
     if($stmt = $mysqli->prepare($occupantupdate2)){
       $stmt->bind_param("iis",$occupants12, $room12, $location12);
       $occupants12 = 0;
@@ -366,6 +368,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $stmt->execute();
         $stmt->close();
     }
+  }
+  else{
+    $occupantupdate = "UPDATE tenant SET status=? where Tenant_Id=?";  
+    if($stmt = $mysqli->prepare($occupantupdate)){
+      $stmt->bind_param("si",$occupants, $ID);
+      $occupants = $_POST['editstatus1'];
+      $ID = $_POST['editTenantid'];
+
+        $stmt->execute();
+        $stmt->close();
+  }
+}
     header("location: tenantmanagement.php");
   }
   $mysqli->close();

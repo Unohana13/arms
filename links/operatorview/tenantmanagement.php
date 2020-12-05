@@ -366,6 +366,7 @@ input[type=number] {
 																<input name="editOldlocation" type = "hidden" class="form-control" value="<?php echo $TenantRES['location']; ?>">
 																<input name="editOldRoomNUmber" type = "hidden" class="form-control" value="<?php echo $TenantRES['roomnumber']; ?>">
 																<input name="edittetenantID" type = "hidden" class="form-control" value="<?php echo $TenantRES['Tenant_Id']; ?>">
+																<input name="editoldoccupants" type = "hidden" class="form-control" value="<?php echo $TenantRES['occupants']; ?>">
 																<div class="form-group">
 																<label>Location</label>
 																<?php $initial = "0"; ?>
