@@ -342,7 +342,7 @@ body{
   background-attachment: fixed;
   background-size: cover;
   background-blend-mode: hue;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.85); 
 }
 @keyframes swing {
   0% {
@@ -796,7 +796,7 @@ body {
 .chiller-theme .sidebar-wrapper .sidebar-header .user-info,
 .chiller-theme .sidebar-wrapper .sidebar-brand>a:hover,
 .chiller-theme .sidebar-footer>a:hover i {
-    color: #b8bfce;
+    color: White;
 }
 
 .page-wrapper.chiller-theme.toggled #close-sidebar {
@@ -804,7 +804,7 @@ body {
 }
 
 .page-wrapper.chiller-theme.toggled #close-sidebar:hover {
-    color: #ffffff;
+    color: #16c7ff;
 }
 
 .chiller-theme .sidebar-wrapper ul li:hover a i,
