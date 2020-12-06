@@ -945,8 +945,8 @@ html{
     <div class="col-sm-5">
       <p>Contact us and we'll get back to you within 24 hours.</p>
       <p><span class="glyphicon glyphicon-map-marker"></span> Location of HQ </p>
-      <p><span class="glyphicon glyphicon-phone"></span> +639484143467 / +639480704776</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> Apartment_System@gmail.com</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +6399951964731 / +639173247337</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> ApartmentManagementSofEng@gmail.com</p>
     </div>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" id="form" method="post" name="form">
     <div class="col-sm-7 slideanim">
@@ -990,10 +990,10 @@ $mail->SMTPAuth   = true;
 $mail->SMTPSecure = "tls";
 $mail->Port       = 587;
 $mail->Host       = "smtp.gmail.com";
-$mail->Username   = "ramonadormitory@gmail.com";
-$mail->Password   = "Ramona123456";
+$mail->Username   = "ApartmentManagementSofEng@gmail.com";
+$mail->Password   = "rtu1969!";
 $mail->IsHTML(true);
-$mail->AddAddress("ramonadormitory@gmail.com", "Ramona");
+$mail->AddAddress("ApartmentManagementSofEng@gmail.com", "JDoe");
 $mail->SetFrom($email, $name);
 $mail->AddReplyTo($email, $name);
 $mail->Subject = "This is a Feedback from the Homepage";
