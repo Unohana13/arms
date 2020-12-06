@@ -964,7 +964,7 @@ $mail->Host       = "smtp.gmail.com";
 $mail->Username   = "ApartmentManagementSofEng@gmail.com";
 $mail->Password   = "rtu1969!";
 $mail->IsHTML(true);
-$mail->AddAddress("ApartmentManagementSofEng@gmail.com", "JDoe");
+$mail->AddAddress(" ApartmentManagementSofEng@gmail.com", "JDoe");
 $mail->SetFrom($email, $name);
 $mail->AddReplyTo($email, $name);
 $mail->Subject = "This is a Feedback from the Homepage";
