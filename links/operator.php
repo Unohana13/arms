@@ -103,7 +103,6 @@ $output .= '<tr>
 <td>'.$cash1.'</td>
 <td>'.$row["Dep_Slip"].'</td>
 </tr>
-
 ';
 }
 return $output;
@@ -134,7 +133,6 @@ $output1 .= '<tr>
 <td>'.$row["Guardian_Contact"].'</td>
 <td>'.$row["Home_Address"].'</td>
 </tr>
-
 ';
 }
 return $output1;
@@ -160,7 +158,6 @@ $output2 .= '<tr>
 <td>'.$row["Tenant_Name"].'</td>
 <td>'.$row["Room_Number"].'</td>
 </tr>
-
 ';
 }
 return $output2;
@@ -324,15 +321,13 @@ $obj_pdf->Output('transientlistreport.pdf', 'I');
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -390,7 +385,7 @@ body{
   }
 }
 body {
-  font-size: 0.9rem;
+  font-size: 16px;
 }
 .page-wrapper .sidebar-wrapper,
 .sidebar-wrapper .sidebar-brand > a,
@@ -535,19 +530,19 @@ body {
   display: block;
 }
 .user-name{
-  font-size: 13px;
+  font-size: 18px;
 }
 .sidebar-wrapper .sidebar-header .user-info .user-role {
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .sidebar-wrapper .sidebar-header .user-info .user-status {
-  font-size: 11px;
+  font-size: 16px;
   margin-top: 4px;
 }
 
 .sidebar-wrapper .sidebar-header .user-info .user-status i {
-  font-size: 8px;
+  font-size: 12px;
   margin-right: 4px;
   color: #5cb85c;
 }
@@ -582,7 +577,7 @@ body {
 
 .sidebar-wrapper .sidebar-menu ul li a i {
   margin-right: 10px;
-  font-size: 12px;
+  font-size: 16px;
   width: 30px;
   height: 30px;
   line-height: 30px;
@@ -596,7 +591,7 @@ body {
 }
 
 .sidebar-wrapper .sidebar-menu .sidebar-dropdown > a:after {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Roboto";
   font-weight: 900;
   content: "\f105";
   font-style: normal;
@@ -620,12 +615,12 @@ body {
 
 .sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu li {
   padding-left: 25px;
-  font-size: 13px;
+  font-size: 18px;
 }
 
 .sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu li a:before {
   content: "\f111";
-  font-family: "Font Awesome 5 Free";
+  font-family: "Roboto";
   font-weight: 400;
   font-style: normal;
   display: inline-block;
@@ -634,7 +629,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin-right: 10px;
-  font-size: 8px;
+  font-size: 12px;
 }
 
 .sidebar-wrapper .sidebar-menu ul li a span.label,
@@ -670,7 +665,7 @@ body {
 }
 
 .sidebar-footer > a {
-  font-size: 12px;
+  font-size: 16px;
   flex-grow: 1;
   text-align: center;
   height: 30px;
@@ -678,7 +673,7 @@ body {
   position: relative;
 }
 #FooA, #FooB{
-  font-family: calibri;
+  font-family: "Roboto";
 }
 .sidebar-footer > a .notification {
   position: absolute;
@@ -948,7 +943,7 @@ $("#show-sidebar").click(function() {
           <li class="sidebar-dropdown">
             <a href="#">
               <i class="fa fa-info-circle"></i>
-              <span style="font-size:13px;">Management</span>
+              <span style="font-size:18px;">Management</span>
             </a>
             <div class="sidebar-submenu">
               <ul>
@@ -979,7 +974,7 @@ $("#show-sidebar").click(function() {
           <li class="sidebar-dropdown">
             <a href="#">
               <i class="fa fa-info-circle"></i>
-              <span style="font-size:13px;">Pending/Not paid</span>
+              <span style="font-size:18px;">Pending/Not paid</span>
             </a>
 
             <div class="sidebar-submenu">
@@ -999,11 +994,11 @@ $("#show-sidebar").click(function() {
 
           <a href="#addRoom" data-toggle="modal">
             <i class="fa fa-file-pdf-o" style = "color: red;" ></i>
-            <span style="Font-size:13px;">Print Payment Reports</span>
+            <span style="Font-size:18px;">Print Payment Reports</span>
           </a>
           <a href="#addRoom1" data-toggle="modal">
             <i class="fa fa-file-pdf-o" style = "color: red;" ></i>
-            <span style="Font-size:13px;">Print Tenant List</span>
+            <span style="Font-size:18px;">Print Tenant List</span>
           </a>
           <!--<a href="#addRoom2" data-toggle="modal">
             <i class="fa fa-file-pdf-o" style = "color: red;" ></i>
