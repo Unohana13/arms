@@ -788,7 +788,7 @@ body {
 .chiller-theme .sidebar-wrapper .sidebar-brand>a,
 .chiller-theme .sidebar-wrapper .sidebar-menu ul li a,
 .chiller-theme .sidebar-footer>a {
-    color: #818896;
+    color: #3a3f48;
 }
 
 .chiller-theme .sidebar-wrapper .sidebar-menu ul li:hover>a,
