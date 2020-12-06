@@ -139,7 +139,7 @@ class SMTP
      *
      * @var string|callable|\Psr\Log\LoggerInterface
      */
-    public $Debugoutput = 'echo';
+   // public $Debugoutput = 'echo';
 
     /**
      * Whether to use VERP.
