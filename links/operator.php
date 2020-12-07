@@ -562,6 +562,7 @@ body {
 .sidebar-wrapper .sidebar-menu .header-menu span {
   font-weight: bold;
   font-size: 16px;
+  position: center;
   padding: 15px 20px 5px 20px;
   display: inline-block;
 
@@ -765,8 +766,6 @@ body {
      background-blend-mode: hue;
      background-position: center;
      background-size: cover;
-     background-color: rgba(29, 29, 29, 0.65);
-
 }
 
 .chiller-theme .sidebar-wrapper .sidebar-header,
@@ -823,7 +822,7 @@ body {
 }
 
 .chiller-theme .sidebar-wrapper .sidebar-menu .header-menu span {
-    color: #b8bfce;
+    color: #DCDCDC;
 }
 
 .chiller-theme .sidebar-footer {
@@ -899,13 +898,13 @@ $("#show-sidebar").click(function() {
 
 
 <div class="page-wrapper chiller-theme toggled">
-  <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+  <a id="show-sidebar" class="btn btn-sm btn-dark" href="#" {text-align: center;}>
     <i class="fas fa-bars"></i>
   </a>
   <nav id="sidebar" class="sidebar-wrapper">
     <div class="sidebar-content">
       <div class="sidebar-brand">
-        <a href="#">Apartment Rental Management System</a>
+        <a href="#">Apartment Rental Management System </a>
         <div id="close-sidebar">
           <i class="fas fa-times"></i>
         </div>
@@ -938,7 +937,7 @@ $("#show-sidebar").click(function() {
       <div class="sidebar-menu">
         <ul>
           <li class="header-menu">
-            <span>General</span>
+            <span> General</span>
           </li>
           <li class="sidebar-dropdown">
             <a href="#">
