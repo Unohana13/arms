@@ -766,6 +766,8 @@ body {
      background-blend-mode: hue;
      background-position: center;
      background-size: cover;
+     background-color: rgba(29, 29, 29, 0.65);
+
 }
 
 .chiller-theme .sidebar-wrapper .sidebar-header,
@@ -818,7 +820,7 @@ body {
 .chiller-theme .sidebar-wrapper .sidebar-menu .sidebar-dropdown div,
 .chiller-theme .sidebar-wrapper .sidebar-search input.search-menu,
 .chiller-theme .sidebar-wrapper .sidebar-search .input-group-text {
-    background: rgba(29, 29, 29, 0.5);
+    
 }
 
 .chiller-theme .sidebar-wrapper .sidebar-menu .header-menu span {
